@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MxE-YK-dkA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <!--Landing View Controller-->
         <scene sceneID="03S-CF-YjM">
             <objects>
-                <viewController storyboardIdentifier="LandingViewController" id="MxE-YK-dkA" customClass="LandingViewController" customModule="Patissier_ObjC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingViewController" id="MxE-YK-dkA" customClass="LandingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bXa-tH-lwz"/>
                         <viewControllerLayoutGuide type="bottom" id="HB5-ls-UJs"/>
@@ -48,6 +48,9 @@
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Sign In with Facebook"/>
+                                <connections>
+                                    <action selector="facebookLoginButtonPressed:" destination="MxE-YK-dkA" eventType="touchUpInside" id="vac-ZD-fWH"/>
+                                </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DhL-Ap-CTF">
                                 <rect key="frame" x="365" y="0.0" width="10" height="115"/>
@@ -84,10 +87,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backgroundGradientView" destination="XzM-PY-GSs" id="r0j-Rs-zF5"/>
-                        <outlet property="backgroundImageView" destination="Nao-8e-jhN" id="rL4-BQ-eq7"/>
-                        <outlet property="logoLabel" destination="AfG-Re-qfp" id="09M-JN-Uj7"/>
-                        <outlet property="signInWithFacebookButton" destination="xxY-Mo-ah1" id="pkw-jc-Bn3"/>
+                        <outlet property="backgroundGradientView" destination="XzM-PY-GSs" id="z8Q-dS-hfb"/>
+                        <outlet property="backgroundImageView" destination="Nao-8e-jhN" id="7h3-RF-tav"/>
+                        <outlet property="logoLabel" destination="AfG-Re-qfp" id="9nc-pI-1cH"/>
+                        <outlet property="signInWithFacebookButton" destination="xxY-Mo-ah1" id="Bjp-DI-2fM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BwR-rR-k5w" userLabel="First Responder" sceneMemberID="firstResponder"/>

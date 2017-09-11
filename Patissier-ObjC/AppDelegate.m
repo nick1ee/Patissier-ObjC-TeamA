@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "LandingViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,21 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UIStoryboard *initStoryboard = [UIStoryboard storyboardWithName:@"Landing" bundle: nil];
-    
-//    UIViewController *initViewController = [[UIViewController alloc] init];
-    
-//    UIViewController *initViewController = [ initStoryboard instantiateInitialViewController];
-    
-    UIViewController *initViewController = [initStoryboard instantiateViewControllerWithIdentifier:@"LandingViewController"];
+    LandingViewController *initViewController = [[UIStoryboard storyboardWithName:@"Landing" bundle:nil] instantiateViewControllerWithIdentifier: @"LandingViewController"];
+       
+//    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:initViewController];
     
     self.window.rootViewController = initViewController;
     
     [self.window makeKeyAndVisible];
     
     return YES;
+
+    
 }
 
 
