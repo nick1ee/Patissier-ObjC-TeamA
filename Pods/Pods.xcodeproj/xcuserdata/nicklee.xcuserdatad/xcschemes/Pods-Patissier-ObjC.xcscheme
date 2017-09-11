@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E0D75A20389CC8C5B96FC874585D0155'
+               BlueprintIdentifier = 'FD3B68F71EBA0A577C77AE018A6E3BF6'
                BlueprintName = 'Pods-Patissier-ObjC'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-Patissier-ObjC.a'>
