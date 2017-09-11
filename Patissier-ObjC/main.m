@@ -10,6 +10,9 @@
 #import "AppDelegate.h"
 #import "APIClient.h"
 
+#import "AFNetworking.h"
+
+
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
@@ -17,6 +20,9 @@ int main(int argc, char * argv[]) {
         APIClient *client = [APIClient new];
         
         [client indexProducts];
+        [client getProductInformation];
+        
+    
         
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
         

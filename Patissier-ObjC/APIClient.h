@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "APIClient.h"
 
 @interface APIClient: NSObject
 
@@ -19,6 +20,8 @@
 
 //括號裡面是資料回傳型態
 -(void)indexProducts;
+//要改成拿回東西的型態
+-(void)getProductInformation;
 
 
 
