@@ -17,11 +17,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
-//    [self setWindow: [[UIWindow alloc] initwithFrame: [[UIScreen mainScreen] bounds]]]
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
+    UIStoryboard *initStoryboard = [UIStoryboard storyboardWithName:@"Landing" bundle: nil];
     
+//    UIViewController *initViewController = [[UIViewController alloc] init];
+    
+//    UIViewController *initViewController = [ initStoryboard instantiateInitialViewController];
+    
+    UIViewController *initViewController = [initStoryboard instantiateViewControllerWithIdentifier:@"LandingViewController"];
+    
+    self.window.rootViewController = initViewController;
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

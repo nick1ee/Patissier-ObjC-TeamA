@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6EBDF42E1F662C36002FB1A6 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDF42D1F662C36002FB1A6 /* Landing.storyboard */; };
+		6EBDF4311F663589002FB1A6 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF4301F663589002FB1A6 /* LandingViewController.m */; };
 		92FFF151412EFB5CC7463908 /* libPods-Patissier-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 565732C763E8BE2AB00540D6 /* libPods-Patissier-ObjC.a */; };
 		B86D60621F661F15002200D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60611F661F15002200D5 /* main.m */; };
 		B86D60651F661F15002200D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60641F661F15002200D5 /* AppDelegate.m */; };
-		B86D60681F661F15002200D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60671F661F15002200D5 /* ViewController.m */; };
 		B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86D606C1F661F15002200D5 /* Assets.xcassets */; };
 		B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86D606E1F661F15002200D5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,13 +19,13 @@
 /* Begin PBXFileReference section */
 		565732C763E8BE2AB00540D6 /* libPods-Patissier-ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Patissier-ObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBDF42D1F662C36002FB1A6 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
+		6EBDF42F1F663589002FB1A6 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
+		6EBDF4301F663589002FB1A6 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
 		74719BED495C763CC0788E93 /* Pods-Patissier-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		B86D605D1F661F15002200D5 /* Patissier-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patissier-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86D60611F661F15002200D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B86D60631F661F15002200D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B86D60641F661F15002200D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B86D60661F661F15002200D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B86D60671F661F15002200D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B86D606C1F661F15002200D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B86D606F1F661F15002200D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B86D60711F661F15002200D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,11 +82,12 @@
 		B86D605F1F661F15002200D5 /* Patissier-ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				B86D60771F662A7E002200D5 /* Profile */,
 				B86D60631F661F15002200D5 /* AppDelegate.h */,
 				B86D60641F661F15002200D5 /* AppDelegate.m */,
-				B86D60661F661F15002200D5 /* ViewController.h */,
-				B86D60671F661F15002200D5 /* ViewController.m */,
 				6EBDF42D1F662C36002FB1A6 /* Landing.storyboard */,
+				6EBDF42F1F663589002FB1A6 /* LandingViewController.h */,
+				6EBDF4301F663589002FB1A6 /* LandingViewController.m */,
 				B86D606C1F661F15002200D5 /* Assets.xcassets */,
 				B86D606E1F661F15002200D5 /* LaunchScreen.storyboard */,
 				B86D60711F661F15002200D5 /* Info.plist */,
@@ -101,6 +102,13 @@
 				B86D60611F661F15002200D5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B86D60771F662A7E002200D5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B86D60681F661F15002200D5 /* ViewController.m in Sources */,
 				B86D60651F661F15002200D5 /* AppDelegate.m in Sources */,
+				6EBDF4311F663589002FB1A6 /* LandingViewController.m in Sources */,
 				B86D60621F661F15002200D5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

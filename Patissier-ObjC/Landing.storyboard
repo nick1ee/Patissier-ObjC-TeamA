@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MxE-YK-dkA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <!--Landing View Controller-->
         <scene sceneID="03S-CF-YjM">
             <objects>
-                <viewController storyboardIdentifier="LandingViewController" id="MxE-YK-dkA" customClass="LandingViewController" customModule="Patissier" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LandingViewController" id="MxE-YK-dkA" customClass="LandingViewController" customModule="Patissier_ObjC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bXa-tH-lwz"/>
                         <viewControllerLayoutGuide type="bottom" id="HB5-ls-UJs"/>
@@ -84,10 +84,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backgroundGradientView" destination="XzM-PY-GSs" id="PnP-oy-z4O"/>
-                        <outlet property="backgroundImageView" destination="Nao-8e-jhN" id="m23-27-nxc"/>
-                        <outlet property="logoLabel" destination="AfG-Re-qfp" id="sHr-ir-2nW"/>
-                        <outlet property="signInWithFacebookButton" destination="xxY-Mo-ah1" id="af3-pZ-iGF"/>
+                        <outlet property="backgroundGradientView" destination="XzM-PY-GSs" id="r0j-Rs-zF5"/>
+                        <outlet property="backgroundImageView" destination="Nao-8e-jhN" id="rL4-BQ-eq7"/>
+                        <outlet property="logoLabel" destination="AfG-Re-qfp" id="09M-JN-Uj7"/>
+                        <outlet property="signInWithFacebookButton" destination="xxY-Mo-ah1" id="pkw-jc-Bn3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BwR-rR-k5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
