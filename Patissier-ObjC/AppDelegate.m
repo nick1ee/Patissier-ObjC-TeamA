@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ProfileInformationTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
-    UIViewController *initViewController = [[UIViewController alloc] init];
+    ProfileInformationTableViewController *initViewController = [[ProfileInformationTableViewController alloc] init];
     
     self.window.rootViewController = initViewController;
     
