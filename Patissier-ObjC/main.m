@@ -8,9 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "APIClient.h"
+
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        
+        APIClient *client = [APIClient new];
+        
+        [client indexProducts];
+        
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        
+        
+        
+        
+        
     }
 }
