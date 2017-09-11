@@ -6,6 +6,6 @@ target 'Patissier-ObjC' do
   # use_frameworks!
 
   # Pods for Patissier-ObjC
-  pod 'FBSDKLoginKit', '4.23.0'
+  pod 'FBSDKLoginKit', '4.26.0'
 
 end
