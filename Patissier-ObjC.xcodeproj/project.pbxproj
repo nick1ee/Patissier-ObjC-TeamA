@@ -43,6 +43,7 @@
 		B86D60831F663969002200D5 /* ProfileInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInformationTableViewController.m; sourceTree = "<group>"; };
 		B86D60851F663D09002200D5 /* ProfileSegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileSegmentedControlTableViewCell.h; sourceTree = "<group>"; };
 		B86D60861F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileSegmentedControlTableViewCell.m; sourceTree = "<group>"; };
+		B8F7F9C41F6655F900A72E09 /* UserAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAPIClient.h; sourceTree = "<group>"; };
 		EB22659258DC1E777BB628BF /* Pods-Patissier-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +97,7 @@
 		B86D605F1F661F15002200D5 /* Patissier-ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				B8F7F9C31F6655AA00A72E09 /* User */,
 				B86D60771F662A7E002200D5 /* Profile */,
 				B86D60631F661F15002200D5 /* AppDelegate.h */,
 				B86D60641F661F15002200D5 /* AppDelegate.m */,
@@ -131,6 +133,14 @@
 				B86D60861F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		B8F7F9C31F6655AA00A72E09 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B8F7F9C41F6655F900A72E09 /* UserAPIClient.h */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
