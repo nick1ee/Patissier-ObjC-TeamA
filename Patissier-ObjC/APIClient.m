@@ -40,12 +40,12 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager.requestSerializer setValue:@"calvinAndHobbesRock" forHTTPHeaderField:@"X-I do what I want"];
+    [manager.requestSerializer setValue:@"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiI1OTRlMjJlNGU2Y2I2MDE5ZThjYjYwMTkiLCJleHAiOjE1MzAwOTkyNjUuMzY0LCJpYXQiOjE0OTg1NjMyNjUuMzY0NTksImlzcyI6IjU5MjUxY2IxNDdkNTNiMDg1Y2EwNzY1NCIsInR5cGUiOiJhcHAiLCJ2ZXJzaW9uIjoiMS4wIn0.q6qdIMcoGCYWG8hXcmADCrOO05dy0ffX1nNwgf9o7V8" forHTTPHeaderField:@"Authorization"];
     
-    [manager GET:@"http://localhost:3000" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+    [manager GET:@"http://52.198.40.72/patissier/api/v1/products" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"JSON: %@ 成功", responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"Error: %@", error);
+        NSLog(@"Error: %@ 失敗", error);
     }];
 
     
