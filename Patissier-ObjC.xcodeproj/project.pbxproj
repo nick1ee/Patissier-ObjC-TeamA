@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EBDF42E1F662C36002FB1A6 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDF42D1F662C36002FB1A6 /* Landing.storyboard */; };
 		92FFF151412EFB5CC7463908 /* libPods-Patissier-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 565732C763E8BE2AB00540D6 /* libPods-Patissier-ObjC.a */; };
 		B86D60621F661F15002200D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60611F661F15002200D5 /* main.m */; };
 		B86D60651F661F15002200D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60641F661F15002200D5 /* AppDelegate.m */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		565732C763E8BE2AB00540D6 /* libPods-Patissier-ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Patissier-ObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EBDF42D1F662C36002FB1A6 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
 		74719BED495C763CC0788E93 /* Pods-Patissier-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		B86D605D1F661F15002200D5 /* Patissier-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patissier-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86D60611F661F15002200D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				B86D60641F661F15002200D5 /* AppDelegate.m */,
 				B86D60661F661F15002200D5 /* ViewController.h */,
 				B86D60671F661F15002200D5 /* ViewController.m */,
+				6EBDF42D1F662C36002FB1A6 /* Landing.storyboard */,
 				B86D606C1F661F15002200D5 /* Assets.xcassets */,
 				B86D606E1F661F15002200D5 /* LaunchScreen.storyboard */,
 				B86D60711F661F15002200D5 /* Info.plist */,
@@ -134,6 +137,7 @@
 				TargetAttributes = {
 					B86D605C1F661F15002200D5 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2QFPTG9564;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -161,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EBDF42E1F662C36002FB1A6 /* Landing.storyboard in Resources */,
 				B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */,
 				B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */,
 			);
@@ -175,13 +180,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Patissier-ObjC-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9DFB5B35EBB897CF5FEA0ADA /* [CP] Copy Pods Resources */ = {
@@ -190,9 +198,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -338,6 +349,7 @@
 			baseConfigurationReference = 74719BED495C763CC0788E93 /* Pods-Patissier-ObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2QFPTG9564;
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicklee.Patissier-ObjC";
@@ -350,6 +362,7 @@
 			baseConfigurationReference = EB22659258DC1E777BB628BF /* Pods-Patissier-ObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2QFPTG9564;
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicklee.Patissier-ObjC";
