@@ -7,6 +7,7 @@
 //
 
 #import "ProductCollectionViewController.h"
+#import "ProductGridCollectionViewCell.h"
 
 @interface ProductCollectionViewController () {
     
@@ -16,20 +17,24 @@
 
 @implementation ProductCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    ProductCollectionViewController *coolViewCtrlObj=[[ProductCollectionViewController alloc] initWithNibName:@"ProductionCollectionView" bundle:nil];
+//    UICollectionViewFlowLayout* flowLayout = [[UICollectionViewFlowLayout alloc] init];
+//    
+//    flowLayout.itemSize = CGSizeMake(100, 100);
+//    [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+//    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    UINib *nib = [UINib nibWithNibName:@"ProductCollectionViewCell" bundle:nil];
     
-    // Do any additional setup after loading the view.
+    
+    [self.collectionView registerNib: nib forCellWithReuseIdentifier:@"Cell"];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,17 +56,19 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of items
-    return 0;
+    return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    
+    ProductGridCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ProductGridCollectionViewCell" forIndexPath:indexPath];
     
     // Configure the cell
     

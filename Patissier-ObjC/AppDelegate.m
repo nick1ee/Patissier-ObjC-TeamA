@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ProductCollectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,20 +20,21 @@
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
-//    UIViewController *initViewController = [[UIViewController alloc] init];
-//    
-//    self.window.rootViewController = initViewController;
-//    
-//    [self.window makeKeyAndVisible];
-//    
-//    return YES;
+    ProductCollectionViewController *initViewController = [[UICollectionViewController alloc] initWithNibName:@"ProductCollectionViewCell" bundle:nil];
     
     
-    self.viewController = [[UICollectionViewController alloc] initWithNibName:@"ProductionCollectionView" bundle:nil];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:self.viewController];
-    self.window.rootViewController = nav;
+    self.window.rootViewController = initViewController;
+    
     [self.window makeKeyAndVisible];
+    
     return YES;
+    
+    
+//    self.viewController = [[UICollectionViewController alloc] initWithNibName:@"ProductionCollectionView" bundle:nil];
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:self.viewController];
+//    self.window.rootViewController = nav;
+//    [self.window makeKeyAndVisible];
+//    return YES;
 }
 
 

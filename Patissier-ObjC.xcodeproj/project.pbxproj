@@ -15,9 +15,8 @@
 		B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86D606E1F661F15002200D5 /* LaunchScreen.storyboard */; };
 		BE5DA7551F663842005E92F6 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5DA7541F663842005E92F6 /* APIClient.m */; };
 		BE5DA7581F66821A005E92F6 /* ProductCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5DA7571F66821A005E92F6 /* ProductCollectionViewController.m */; };
-		BE5DA75A1F6687B4005E92F6 /* ProductGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5DA7591F6687B4005E92F6 /* ProductGridCollectionViewCell.xib */; };
-		BE7F27401F67785A00F92C6B /* ProductionCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7F273F1F67785A00F92C6B /* ProductionCollectionView.xib */; };
-		BE7F27431F6778DA00F92C6B /* ProductionCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7F27421F6778DA00F92C6B /* ProductionCollectionView.m */; };
+		BEB618101F67C0E20021542E /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB6180E1F67C0E20021542E /* ProductCollectionViewCell.m */; };
+		BEB618111F67C0E20021542E /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB6180F1F67C0E20021542E /* ProductCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +35,9 @@
 		BE5DA7541F663842005E92F6 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		BE5DA7561F66821A005E92F6 /* ProductCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewController.h; sourceTree = "<group>"; };
 		BE5DA7571F66821A005E92F6 /* ProductCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewController.m; sourceTree = "<group>"; };
-		BE5DA7591F6687B4005E92F6 /* ProductGridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductGridCollectionViewCell.xib; sourceTree = "<group>"; };
-		BE7F273F1F67785A00F92C6B /* ProductionCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductionCollectionView.xib; sourceTree = "<group>"; };
-		BE7F27411F6778DA00F92C6B /* ProductionCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductionCollectionView.h; sourceTree = "<group>"; };
-		BE7F27421F6778DA00F92C6B /* ProductionCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductionCollectionView.m; sourceTree = "<group>"; };
+		BEB6180D1F67C0E20021542E /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
+		BEB6180E1F67C0E20021542E /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
+		BEB6180F1F67C0E20021542E /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		EB22659258DC1E777BB628BF /* Pods-Patissier-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,12 +125,11 @@
 		BE5DA74D1F663423005E92F6 /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				BE7F273F1F67785A00F92C6B /* ProductionCollectionView.xib */,
-				BE7F27411F6778DA00F92C6B /* ProductionCollectionView.h */,
-				BE7F27421F6778DA00F92C6B /* ProductionCollectionView.m */,
 				BE5DA7561F66821A005E92F6 /* ProductCollectionViewController.h */,
-				BE5DA7591F6687B4005E92F6 /* ProductGridCollectionViewCell.xib */,
 				BE5DA7571F66821A005E92F6 /* ProductCollectionViewController.m */,
+				BEB6180D1F67C0E20021542E /* ProductCollectionViewCell.h */,
+				BEB6180E1F67C0E20021542E /* ProductCollectionViewCell.m */,
+				BEB6180F1F67C0E20021542E /* ProductCollectionViewCell.xib */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -199,10 +196,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE5DA75A1F6687B4005E92F6 /* ProductGridCollectionViewCell.xib in Resources */,
 				B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */,
 				B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */,
-				BE7F27401F67785A00F92C6B /* ProductionCollectionView.xib in Resources */,
+				BEB618111F67C0E20021542E /* ProductCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B86D60681F661F15002200D5 /* ViewController.m in Sources */,
-				BE7F27431F6778DA00F92C6B /* ProductionCollectionView.m in Sources */,
+				BEB618101F67C0E20021542E /* ProductCollectionViewCell.m in Sources */,
 				B86D60651F661F15002200D5 /* AppDelegate.m in Sources */,
 				BE5DA7581F66821A005E92F6 /* ProductCollectionViewController.m in Sources */,
 				B86D60621F661F15002200D5 /* main.m in Sources */,
