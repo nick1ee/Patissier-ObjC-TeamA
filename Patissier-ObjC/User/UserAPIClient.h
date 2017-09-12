@@ -27,6 +27,6 @@ typedef ReadMeFailure = (Error) -> (void)
 
 - (@optional URLSessionTask)readMe:
     (ReadMeSuccess *)success,
-    (ReadMeFailure *) failure;
+    (ReadMeFailure *)failure;
 
 @end

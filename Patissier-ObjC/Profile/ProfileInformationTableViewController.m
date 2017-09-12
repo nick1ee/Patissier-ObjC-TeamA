@@ -6,16 +6,9 @@
 //  Copyright © 2017年 nicklee. All rights reserved.
 //
 
+#import "UserManagerDelegate.h"
 #import "ProfileInformationTableViewController.h"
-
-@interface ProfileInformationTableViewController ()
-{
-    id delegate;
-}
-
-- (void) cell;
-
-@end
+#import "ProfileInformationTableViewCell.h"
 
 // MARK: - Component
 
@@ -23,9 +16,9 @@ typedef enum {
     
     // MARK: Case
     
-    information,
-    segmentedControler,
-    Content
+    information = 0,
+    segmentedControler = 1,
+    content = 2
     
 } ProfileComponent;
 
@@ -48,42 +41,52 @@ NSDictionary *displayingFavoriteControllerPool;
     components = [[NSArray alloc] initWithObjects:
                   @(information),
                   @(segmentedControler),
-                  @(Content),
+                  @(content),
                   nil];
+    
+    UINib *nib = [UINib nibWithNibName:@"ProfileInformationTableViewCell" bundle:nil];
+    
+    [self.tableView registerNib: nib forCellReuseIdentifier:@"ProfileInformationTableViewCell"];
+    
+//    [self.tableView.estimatedRowHeight = [];
+//    
+//    [self.tableView.rowHeight = UITableViewAutomaticDimension];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 1;
+
+    return components.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
+    
     return 1;
-}
-
-- (void) cell {
-    NSLog(@"delegation is passed");
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    NSInteger component = indexPath.section;
     
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    if (component == 0) {
+     
+        ProfileInformationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"ProfileInformationTableViewCell" forIndexPath: indexPath];
+        
+        return cell;
+        
+    } else if (component == 1) {
+        
+        
+    } else {
+        
+        
+    }
+
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+         
+    return 400.0;
     
-    cell.textLabel.text = @"cell is here!";
-    
-    NSLog(@"123456789");
-    
-    return cell;
 }
 
 

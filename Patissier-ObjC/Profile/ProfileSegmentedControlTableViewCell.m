@@ -10,24 +10,39 @@
 
 // MARK: - ProfileSegmentedControlTableViewCellDelegate
 
-@protocol ProfileSegmentedControlTableViewCellDelegate <NSObject>
-
-@required
-- (void) cell;
-
-@end
-
 @implementation ProfileSegmentedControlTableViewCell
+
+@synthesize leftButton;
+@synthesize rightButton;
+
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void) setUpBackgroundView {
+    
+    self.contentView.backgroundColor = [[UIColor alloc] initWithRed: 255.0 / 255.0 green: 94.0 / 255.0 blue: 89.0 / 255.0 alpha: 1.0];
+    
+}
+
+- (void) setUpLeftButton {
+    
+    [leftButton addTarget:self.leftButton action:(leftDidSelect) forControlEvents: UIControlEventTouchUpInside]
+    
+    [leftButton setTitle:@"Favorite" forState:UIControlEventTouchUpInside]
+    
+    
 }
 
 @end

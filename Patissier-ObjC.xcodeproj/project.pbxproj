@@ -14,12 +14,14 @@
 		B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86D606C1F661F15002200D5 /* Assets.xcassets */; };
 		B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86D606E1F661F15002200D5 /* LaunchScreen.storyboard */; };
 		B86D607D1F6635B4002200D5 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D60781F6635B4002200D5 /* ProfileTableViewController.swift */; };
-		B86D607E1F6635B4002200D5 /* ProfileInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D60791F6635B4002200D5 /* ProfileInformationTableViewCell.swift */; };
 		B86D607F1F6635B4002200D5 /* ProfileInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86D607A1F6635B4002200D5 /* ProfileInformationTableViewCell.xib */; };
 		B86D60801F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D607B1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.swift */; };
 		B86D60811F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86D607C1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.xib */; };
 		B86D60841F663969002200D5 /* ProfileInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60831F663969002200D5 /* ProfileInformationTableViewController.m */; };
 		B86D60871F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60861F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m */; };
+		B8F7F9C61F66608800A72E09 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C51F66608800A72E09 /* User.m */; };
+		B8F7F9C81F66706600A72E09 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C71F66706600A72E09 /* UserManager.m */; };
+		B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +37,6 @@
 		B86D606F1F661F15002200D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B86D60711F661F15002200D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B86D60781F6635B4002200D5 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
-		B86D60791F6635B4002200D5 /* ProfileInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInformationTableViewCell.swift; sourceTree = "<group>"; };
 		B86D607A1F6635B4002200D5 /* ProfileInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileInformationTableViewCell.xib; sourceTree = "<group>"; };
 		B86D607B1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSegmentedControlTableViewCell.swift; sourceTree = "<group>"; };
 		B86D607C1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSegmentedControlTableViewCell.xib; sourceTree = "<group>"; };
@@ -44,6 +45,12 @@
 		B86D60851F663D09002200D5 /* ProfileSegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileSegmentedControlTableViewCell.h; sourceTree = "<group>"; };
 		B86D60861F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileSegmentedControlTableViewCell.m; sourceTree = "<group>"; };
 		B8F7F9C41F6655F900A72E09 /* UserAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAPIClient.h; sourceTree = "<group>"; };
+		B8F7F9C51F66608800A72E09 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		B8F7F9C71F66706600A72E09 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		B8F7F9C91F6684DB00A72E09 /* UserManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManagerDelegate.h; sourceTree = "<group>"; };
+		B8F7F9CA1F6685C400A72E09 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		B8FFB8ED1F677B34007A59DA /* ProfileInformationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInformationTableViewCell.h; sourceTree = "<group>"; };
+		B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInformationTableViewCell.m; sourceTree = "<group>"; };
 		EB22659258DC1E777BB628BF /* Pods-Patissier-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,14 +130,15 @@
 			isa = PBXGroup;
 			children = (
 				B86D60781F6635B4002200D5 /* ProfileTableViewController.swift */,
-				B86D60791F6635B4002200D5 /* ProfileInformationTableViewCell.swift */,
-				B86D607A1F6635B4002200D5 /* ProfileInformationTableViewCell.xib */,
 				B86D607B1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.swift */,
-				B86D607C1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.xib */,
 				B86D60821F663969002200D5 /* ProfileInformationTableViewController.h */,
 				B86D60831F663969002200D5 /* ProfileInformationTableViewController.m */,
+				B86D607C1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.xib */,
 				B86D60851F663D09002200D5 /* ProfileSegmentedControlTableViewCell.h */,
 				B86D60861F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m */,
+				B86D607A1F6635B4002200D5 /* ProfileInformationTableViewCell.xib */,
+				B8FFB8ED1F677B34007A59DA /* ProfileInformationTableViewCell.h */,
+				B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -139,6 +147,10 @@
 			isa = PBXGroup;
 			children = (
 				B8F7F9C41F6655F900A72E09 /* UserAPIClient.h */,
+				B8F7F9C51F66608800A72E09 /* User.m */,
+				B8F7F9CA1F6685C400A72E09 /* UserManager.h */,
+				B8F7F9C71F66706600A72E09 /* UserManager.m */,
+				B8F7F9C91F6684DB00A72E09 /* UserManagerDelegate.h */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -269,11 +281,13 @@
 			files = (
 				B86D60681F661F15002200D5 /* ViewController.m in Sources */,
 				B86D60651F661F15002200D5 /* AppDelegate.m in Sources */,
+				B8F7F9C81F66706600A72E09 /* UserManager.m in Sources */,
+				B8F7F9C61F66608800A72E09 /* User.m in Sources */,
 				B86D60871F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m in Sources */,
-				B86D607E1F6635B4002200D5 /* ProfileInformationTableViewCell.swift in Sources */,
 				B86D60841F663969002200D5 /* ProfileInformationTableViewController.m in Sources */,
 				B86D607D1F6635B4002200D5 /* ProfileTableViewController.swift in Sources */,
 				B86D60801F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.swift in Sources */,
+				B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */,
 				B86D60621F661F15002200D5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
