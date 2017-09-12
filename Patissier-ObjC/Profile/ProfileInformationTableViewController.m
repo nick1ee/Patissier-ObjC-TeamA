@@ -9,6 +9,7 @@
 #import "UserManagerDelegate.h"
 #import "ProfileInformationTableViewController.h"
 #import "ProfileInformationTableViewCell.h"
+#import "ProfileSegmentedControlTableViewCell.h"
 
 // MARK: - Component
 
@@ -44,13 +45,17 @@ NSDictionary *displayingFavoriteControllerPool;
                   @(content),
                   nil];
     
-    UINib *nib = [UINib nibWithNibName:@"ProfileInformationTableViewCell" bundle:nil];
+    UINib *infoNib = [UINib nibWithNibName: @"ProfileInformationTableViewCell" bundle:nil];
     
-    [self.tableView registerNib: nib forCellReuseIdentifier:@"ProfileInformationTableViewCell"];
+    [self.tableView registerNib: infoNib forCellReuseIdentifier: @"ProfileInformationTableViewCell"];
     
-//    [self.tableView.estimatedRowHeight = [];
-//    
-//    [self.tableView.rowHeight = UITableViewAutomaticDimension];
+    UINib *segmentNib = [UINib nibWithNibName: @"ProfileSegmentedControlTableViewCell" bundle: nil];
+    
+    [self.tableView registerNib: segmentNib forCellReuseIdentifier: @"ProfileSegmentedControlTableViewCell"];
+    
+    self.tableView.estimatedRowHeight = 300.0;
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -71,13 +76,27 @@ NSDictionary *displayingFavoriteControllerPool;
      
         ProfileInformationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"ProfileInformationTableViewCell" forIndexPath: indexPath];
         
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         return cell;
         
     } else if (component == 1) {
         
+        ProfileSegmentedControlTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"ProfileSegmentedControlTableViewCell" forIndexPath: indexPath];
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        cell.delegate = self;
+        
+        return cell;
         
     } else {
         
+        UITableViewCell *cell = [[UITableViewCell alloc] init];
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell;
         
     }
 
@@ -85,53 +104,53 @@ NSDictionary *displayingFavoriteControllerPool;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
          
-    return 400.0;
+    NSInteger index = indexPath.section;
+    
+    if (index == 0) {
+        
+        return 300.0;
+
+    }else if (index == 1) {
+        
+        return 50.0;
+        
+    }else {
+        
+        return self.view.frame.size.height - 350.0;
+        
+    }
     
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void) cell:(int *)index {
+    
+    if (index == 0) {
+        
+        NSLog(@"changed to zero");
+        
+    } else {
+        
+        NSLog(@"changed to one");
+        
+    }
+    
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSInteger index = indexPath.section;
+    
+    if (index == 2) {
+        
+        
+        
+    } else {
+        
+        return;
+        
+    }
+    
+    
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

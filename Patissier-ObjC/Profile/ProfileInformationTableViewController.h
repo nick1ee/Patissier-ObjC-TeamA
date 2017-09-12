@@ -8,13 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "UserManagerDelegate.h"
+#import "ProfileSegmentedControlTableViewCellDelegate.h"
 
-@interface ProfileInformationTableViewController : UITableViewController
-{
-    id <UserManagerDelegate> delegate;
-}
-
-@property(weak, nonatomic) id<UserManagerDelegate> delegate;
-- (void) cell;
+@interface ProfileInformationTableViewController : UITableViewController <ProfileSegmentedControlTableViewCellDelegate>
 
 @end

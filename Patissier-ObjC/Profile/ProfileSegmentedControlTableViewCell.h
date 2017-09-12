@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "ProfileSegmentedControlTableViewCellDelegate.h"
 
 @interface ProfileSegmentedControlTableViewCell : UITableViewCell
-
-@property (weak, nonatomic) IBOutlet UIButton *leftButton;
-@property (weak, nonatomic) IBOutlet UIButton *rightButton;
-
-@end
-
+{
+    id <ProfileSegmentedControlTableViewCellDelegate> delegate;
+}
 
 typedef enum {
     
@@ -24,9 +22,10 @@ typedef enum {
     
 } Segment;
 
-
-@protocol ProfileSegmentedControlTableViewCellDelegate <NSObject>
-
-- (void) cell:(ProfileSegmentedControlTableViewCell *)cell didSelect: (NSInteger *)index;
+@property (weak, nonatomic) IBOutlet UIButton *leftButton;
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+@property (weak, nonatomic) id<ProfileSegmentedControlTableViewCellDelegate> delegate;
+@property (nonatomic, assign, readwrite) Segment *selectedSegment;
 
 @end
+
