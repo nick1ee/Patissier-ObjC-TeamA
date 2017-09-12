@@ -18,16 +18,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+//    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+//    
+//    UIViewController *initViewController = [[UIViewController alloc] init];
+//    
+//    self.window.rootViewController = initViewController;
+//    
+//    [self.window makeKeyAndVisible];
     
     
-    ProductCollectionViewController *initViewController = [[ProductCollectionViewController alloc] init];
+    
+    UICollectionViewController*initViewController = [[UICollectionViewController alloc] init];
   
     UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
-    [aFlowLayout setItemSize:CGSizeMake(200, 140)];
+    
+    [aFlowLayout setItemSize:CGSizeMake(154, 160)];
+    
     [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     
     initViewController = [[ProductCollectionViewController alloc]initWithCollectionViewLayout:aFlowLayout];
-    //initVC = [[ProductCollectionViewController alloc]initWithC];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 

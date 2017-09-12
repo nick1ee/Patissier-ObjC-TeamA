@@ -21,7 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     self.view.backgroundColor = [UIColor redColor];
     NSLog(@"123123");
     
@@ -29,8 +28,6 @@
     UINib *nib = [UINib nibWithNibName:@"ProductCollectionViewCell" bundle:nil];
     
     [self.collectionView registerNib: nib forCellWithReuseIdentifier:@"cell"];
-    
-    
     
 }
 
@@ -59,13 +56,18 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of items
-    return 1;
+    return 4;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    
     ProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor whiteColor];
+    cell.priceLabel.text = @"123123";
+    
+    
+    
     
     // Configure the cell
     
