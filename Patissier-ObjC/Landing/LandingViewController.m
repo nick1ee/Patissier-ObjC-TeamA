@@ -110,120 +110,83 @@
     
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
     
-//    login.loginBehavior = FBSDKLoginBehaviorBrowser;
-    
-//    if ([FBSDKAccessToken currentAccessToken])
-//    {
-//        
-//        NSLog(@"Token is available : %@", [[FBSDKAccessToken currentAccessToken]tokenString]);
-//        
-//        NSMutableDictionary *jsonTokenDict = [[NSMutableDictionary alloc] init];
-//        
-//        [jsonTokenDict setObject:[[FBSDKAccessToken currentAccessToken]tokenString] forKey:@"access_token"];
-//        
-//        NSData* jsonData = [NSJSONSerialization dataWithJSONObject: jsonTokenDict options: kNilOptions error: &error];
-//        
-//        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-//        
-//        [request setURL:[NSURL URLWithString:@"http://52.198.40.72/patissier/api/v1/sign_in/facebook"]];
-//        
-//        [request setHTTPMethod:@"POST"];
-//        
-//        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//        
-//        [request setHTTPBody:jsonData];
-//        
-//        NSURLConnection *connect = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-//        
-//        if(connect)
-//        {
-//            NSLog(@"Connection Successful");
-//        }
-//        else
-//        {
-//            NSLog(@"Connection could not be made");
-//        }
-//
-//        
-//    }
-//    else
-    {
-        
-        [login logInWithReadPermissions:@[@"email"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error)
+    [login logInWithReadPermissions:@[@"email"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error)
+     {
+         
+         if (error)
          {
              
-             if (error)
-             {
+             NSLog(@"Login process error");
              
-                 NSLog(@"Login process error");
-                 
-             }
-             else if (result.isCancelled)
-             {
+         }
+         else if (result.isCancelled)
+         {
              
-                 NSLog(@"User cancelled login");
-             }
-             else
-             {
+             NSLog(@"User cancelled login");
+         }
+         else
+         {
              
-                 NSLog(@"Login success");
+             NSLog(@"Login success");
+             
+             if ([result.grantedPermissions containsObject:@"email"])
+             {
                  
-                 if ([result.grantedPermissions containsObject:@"email"])
-                 {
+//                 NSLog(@"result is: %@", result);
+//                 NSLog(@"Token is available : %@", [[FBSDKAccessToken currentAccessToken]tokenString]);
                  
-                     NSLog(@"result is: %@", result);
-                     NSLog(@"Token is available : %@", [[FBSDKAccessToken currentAccessToken]tokenString]);
+                 NSMutableDictionary *jsonTokenDict = [[NSMutableDictionary alloc] init];
+                 
+                 [jsonTokenDict setObject:[[FBSDKAccessToken currentAccessToken]tokenString] forKey:@"access_token"];
+                 
+                 NSData* jsonData = [NSJSONSerialization dataWithJSONObject: jsonTokenDict options: kNilOptions error: &error];
+                 
+                 NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+                 
+                 [request setURL:[NSURL URLWithString:@"http://52.198.40.72/patissier/api/v1/sign_in/facebook"]];
+                 
+                 [request setHTTPMethod:@"POST"];
+                 
+                 [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+                 
+                 [request setHTTPBody:jsonData];
+                 
+                 NSURLSessionConfiguration *defaultSessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+                 
+                 NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultSessionConfiguration];
+                 
+                 NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                      
-                     NSMutableDictionary *jsonTokenDict = [[NSMutableDictionary alloc] init];
+                     if(error)
+                     {
+                         NSLog(@"JSONObjectWithData error: %@", error);
+                     }
                      
-                     [jsonTokenDict setObject:[[FBSDKAccessToken currentAccessToken]tokenString] forKey:@"access_token"];
+                     NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                      
-                     NSData* jsonData = [NSJSONSerialization dataWithJSONObject: jsonTokenDict options: kNilOptions error: &error];
+                     NSArray *jsonData = [jsonObject objectForKey:@"data"];
                      
-                     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+                     NSString *jsonToken = [jsonData valueForKey:@"token"];
                      
-                     [request setURL:[NSURL URLWithString:@"http://52.198.40.72/patissier/api/v1/sign_in/facebook"]];
+//                     NSLog(@"111111%@", jsonToken);
                      
-                     [request setHTTPMethod:@"POST"];
+                     [[NSUserDefaults standardUserDefaults] setValue:jsonToken forKey:@"jwtToken"];
                      
-                     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+                     [[NSUserDefaults standardUserDefaults] synchronize];
                      
-                     [request setHTTPBody:jsonData];
+//                     NSLog(@"2222222222%@", [[NSUserDefaults standardUserDefaults] stringForKey:@"jwtToken"]);
                      
-                     NSURLSessionConfiguration *defaultSessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-                     
-                     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultSessionConfiguration];
-                     
-                     NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                         
-                         
-                         
-                     }];
-                     
-                     [dataTask resume];
-                     
-//                     NSURLConnection *connect = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-//                     
-//                     if(connect)
-//                     {
-//                         NSLog(@"Connection Successful");
-//                     }
-//                     else
-//                     {
-//                         NSLog(@"Connection could not be made");
-//                     }
-                     
-                     
-                     
-//                     NSLog(@"111111: %@", jsonTokenDict);
-                     
-                 }
+                 }];
+                 
+                 [dataTask resume];
                  
              }
              
-         }];
-        
-    }
+         }
+         
+     }];
+    
+    
     
 }
 
