@@ -7,7 +7,7 @@
 //
 
 #import "ProductCollectionViewController.h"
-#import "ProductGridCollectionViewCell.h"
+#import "ProductCollectionViewCell.h"
 
 @interface ProductCollectionViewController () {
     
@@ -21,17 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    UICollectionViewFlowLayout* flowLayout = [[UICollectionViewFlowLayout alloc] init];
-//    
-//    flowLayout.itemSize = CGSizeMake(100, 100);
-//    [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-//    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
+    
+    self.view.backgroundColor = [UIColor redColor];
+    NSLog(@"123123");
     
     
     UINib *nib = [UINib nibWithNibName:@"ProductCollectionViewCell" bundle:nil];
     
-    
-    [self.collectionView registerNib: nib forCellWithReuseIdentifier:@"Cell"];
+    [self.collectionView registerNib: nib forCellWithReuseIdentifier:@"cell"];
     
     
     
@@ -68,7 +65,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    ProductGridCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ProductGridCollectionViewCell" forIndexPath:indexPath];
+    ProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell
     

@@ -18,11 +18,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    
-    ProductCollectionViewController *initViewController = [[UICollectionViewController alloc] initWithNibName:@"ProductCollectionViewCell" bundle:nil];
     
     
+    ProductCollectionViewController *initViewController = [[ProductCollectionViewController alloc] init];
+  
+    UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
+    [aFlowLayout setItemSize:CGSizeMake(200, 140)];
+    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    
+    initViewController = [[ProductCollectionViewController alloc]initWithCollectionViewLayout:aFlowLayout];
+    //initVC = [[ProductCollectionViewController alloc]initWithC];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
     self.window.rootViewController = initViewController;
     
     [self.window makeKeyAndVisible];
@@ -30,11 +38,6 @@
     return YES;
     
     
-//    self.viewController = [[UICollectionViewController alloc] initWithNibName:@"ProductionCollectionView" bundle:nil];
-//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:self.viewController];
-//    self.window.rootViewController = nav;
-//    [self.window makeKeyAndVisible];
-//    return YES;
 }
 
 
