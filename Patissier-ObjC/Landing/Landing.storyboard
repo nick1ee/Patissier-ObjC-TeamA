@@ -49,7 +49,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Sign In with Facebook"/>
                                 <connections>
-                                    <action selector="facebookLoginButtonPressed:" destination="MxE-YK-dkA" eventType="touchUpInside" id="vac-ZD-fWH"/>
+                                    <action selector="signInWithFacebook:" destination="MxE-YK-dkA" eventType="touchUpInside" id="pJ9-RC-Eyl"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DhL-Ap-CTF">
