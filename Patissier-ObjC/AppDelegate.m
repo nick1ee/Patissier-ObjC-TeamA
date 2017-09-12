@@ -19,12 +19,19 @@
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
-    UIViewController *initViewController = [[UIViewController alloc] init];
+//    UIViewController *initViewController = [[UIViewController alloc] init];
+//    
+//    self.window.rootViewController = initViewController;
+//    
+//    [self.window makeKeyAndVisible];
+//    
+//    return YES;
     
-    self.window.rootViewController = initViewController;
     
+    self.viewController = [[UICollectionViewController alloc] initWithNibName:@"ProductionCollectionView" bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:self.viewController];
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

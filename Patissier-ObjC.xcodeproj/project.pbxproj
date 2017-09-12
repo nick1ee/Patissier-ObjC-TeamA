@@ -14,6 +14,10 @@
 		B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86D606C1F661F15002200D5 /* Assets.xcassets */; };
 		B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86D606E1F661F15002200D5 /* LaunchScreen.storyboard */; };
 		BE5DA7551F663842005E92F6 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5DA7541F663842005E92F6 /* APIClient.m */; };
+		BE5DA7581F66821A005E92F6 /* ProductCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5DA7571F66821A005E92F6 /* ProductCollectionViewController.m */; };
+		BE5DA75A1F6687B4005E92F6 /* ProductGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5DA7591F6687B4005E92F6 /* ProductGridCollectionViewCell.xib */; };
+		BE7F27401F67785A00F92C6B /* ProductionCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7F273F1F67785A00F92C6B /* ProductionCollectionView.xib */; };
+		BE7F27431F6778DA00F92C6B /* ProductionCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7F27421F6778DA00F92C6B /* ProductionCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,12 @@
 		B86D60711F661F15002200D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE5DA7531F663842005E92F6 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		BE5DA7541F663842005E92F6 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		BE5DA7561F66821A005E92F6 /* ProductCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewController.h; sourceTree = "<group>"; };
+		BE5DA7571F66821A005E92F6 /* ProductCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewController.m; sourceTree = "<group>"; };
+		BE5DA7591F6687B4005E92F6 /* ProductGridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductGridCollectionViewCell.xib; sourceTree = "<group>"; };
+		BE7F273F1F67785A00F92C6B /* ProductionCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductionCollectionView.xib; sourceTree = "<group>"; };
+		BE7F27411F6778DA00F92C6B /* ProductionCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductionCollectionView.h; sourceTree = "<group>"; };
+		BE7F27421F6778DA00F92C6B /* ProductionCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductionCollectionView.m; sourceTree = "<group>"; };
 		EB22659258DC1E777BB628BF /* Pods-Patissier-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +127,12 @@
 		BE5DA74D1F663423005E92F6 /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				BE7F273F1F67785A00F92C6B /* ProductionCollectionView.xib */,
+				BE7F27411F6778DA00F92C6B /* ProductionCollectionView.h */,
+				BE7F27421F6778DA00F92C6B /* ProductionCollectionView.m */,
+				BE5DA7561F66821A005E92F6 /* ProductCollectionViewController.h */,
+				BE5DA7591F6687B4005E92F6 /* ProductGridCollectionViewCell.xib */,
+				BE5DA7571F66821A005E92F6 /* ProductCollectionViewController.m */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -155,6 +171,7 @@
 				TargetAttributes = {
 					B86D605C1F661F15002200D5 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -182,8 +199,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5DA75A1F6687B4005E92F6 /* ProductGridCollectionViewCell.xib in Resources */,
 				B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */,
 				B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */,
+				BE7F27401F67785A00F92C6B /* ProductionCollectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B86D60681F661F15002200D5 /* ViewController.m in Sources */,
+				BE7F27431F6778DA00F92C6B /* ProductionCollectionView.m in Sources */,
 				B86D60651F661F15002200D5 /* AppDelegate.m in Sources */,
+				BE5DA7581F66821A005E92F6 /* ProductCollectionViewController.m in Sources */,
 				B86D60621F661F15002200D5 /* main.m in Sources */,
 				BE5DA7551F663842005E92F6 /* APIClient.m in Sources */,
 			);
@@ -360,10 +381,14 @@
 			baseConfigurationReference = 74719BED495C763CC0788E93 /* Pods-Patissier-ObjC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicklee.Patissier-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Patissier-ObjC/Patissier-ObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -372,10 +397,13 @@
 			baseConfigurationReference = EB22659258DC1E777BB628BF /* Pods-Patissier-ObjC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicklee.Patissier-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Patissier-ObjC/Patissier-ObjC-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

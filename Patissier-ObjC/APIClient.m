@@ -16,7 +16,6 @@
     NSLog(@"123");
 }
 
-
 - (void)getProductInformation{
     
 //    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
