@@ -166,7 +166,7 @@
                      
                      NSString *jsonToken = [jsonData valueForKey:@"token"];
                      
-//                     NSLog(@"111111%@", jsonToken);
+                     NSLog(@"111111%@", jsonToken);
                      
                      [[NSUserDefaults standardUserDefaults] setValue:jsonToken forKey:@"jwtToken"];
                      

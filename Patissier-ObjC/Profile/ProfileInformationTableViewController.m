@@ -6,10 +6,12 @@
 //  Copyright © 2017年 nicklee. All rights reserved.
 //
 
-#import "UserManagerDelegate.h"
-#import "ProfileInformationTableViewController.h"
-#import "InformationCell.h"
+#import "User.h"
+#import "UserManager.h"
 #import "SegmentedCell.h"
+#import "InformationCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "ProfileInformationTableViewController.h"
 
 // MARK: - Component
 
@@ -43,22 +45,16 @@ typedef enum {
 
 // MARK: Property
 
-NSArray *components;
 NSDictionary *unusedFavoriteProviderPool;
 NSDictionary *displayingFavoriteControllerPool;
 Segment *selectedSegment;
 UIButton *leftButton;
 UIButton *rightButton;
+UserManager *manager;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    components = [[NSArray alloc] initWithObjects:
-                  @(information),
-                  @(segmentedControler),
-                  @(content),
-                  nil];
 
     selectedSegment = left;
 
@@ -73,11 +69,18 @@ UIButton *rightButton;
     self.tableView.estimatedRowHeight = 300.0;
 
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    manager = [UserManager shared];
+    
+    manager.delegate = self;
+    
+    [manager fetchProfile];
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return components.count;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -171,17 +174,32 @@ UIButton *rightButton;
 
     NSInteger index = indexPath.section;
 
-    if (index == 2) {
+    if (index == 0) {
 
-
+        InformationCell *displayCell = cell;
+        
+        displayCell.nameLabel.text = manager.currentUser.name;
+        
+        [displayCell.pictureImageView sd_setImageWithURL: manager.currentUser.pictureImageUrl];
 
     } else {
 
         return;
 
     }
+    
+}
 
+- (void)didFetchedProfile:(User *)user {
+    
+    [self.tableView reloadData];
+    
+}
 
+- (void)failure:(NSError *)error {
+    
+    NSLog(@"ERROR");
+    
 }
 
 @end
