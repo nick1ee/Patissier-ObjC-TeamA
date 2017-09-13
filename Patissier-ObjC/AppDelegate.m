@@ -53,6 +53,7 @@
     
     if([[NSUserDefaults standardUserDefaults] objectForKey:@"jwtToken"] != nil)
     {
+        NSLog([[NSUserDefaults standardUserDefaults] objectForKey:@"jwtToken"]);
         
         self.tabBarcontroller = [[TabBarViewController alloc] init];
     

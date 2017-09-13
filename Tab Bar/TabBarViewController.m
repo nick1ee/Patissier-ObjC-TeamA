@@ -9,6 +9,9 @@
 #import "TabBarViewController.h"
 #import "ProfileInformationTableViewController.h"
 
+#import "ProductCollectionViewController.h"
+
+
 @interface TabBarViewController ()
 
 @end
@@ -18,7 +21,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIViewController *storeViewController = [[UIViewController alloc] init];
+
+    UICollectionViewController *storeViewController = [[UICollectionViewController alloc] init];
+    
+    UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
+    
+    [aFlowLayout setItemSize:CGSizeMake(154, 160)];
+    
+    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    
+    storeViewController = [[ProductCollectionViewController alloc]initWithCollectionViewLayout:aFlowLayout];
+
     
     storeViewController.view.backgroundColor = [UIColor yellowColor];
     
