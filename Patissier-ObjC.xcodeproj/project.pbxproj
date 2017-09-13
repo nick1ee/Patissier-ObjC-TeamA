@@ -19,6 +19,7 @@
 		B86D60871F663D09002200D5 /* SegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60861F663D09002200D5 /* SegmentedCell.m */; };
 		B8EAD4DC1F68D87500AECA96 /* SegmentedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EAD4DB1F68D87500AECA96 /* SegmentedCell.xib */; };
 		B8EAD4E11F68F0BD00AECA96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAD4E01F68F0BD00AECA96 /* AppDelegate.m */; };
+		B8EAD4E61F691A6F00AECA96 /* OrderListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAD4E51F691A6F00AECA96 /* OrderListTableViewController.m */; };
 		B8F7F9C61F66608800A72E09 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C51F66608800A72E09 /* User.m */; };
 		B8F7F9C81F66706600A72E09 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C71F66706600A72E09 /* UserManager.m */; };
 		B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */; };
@@ -50,10 +51,12 @@
 		B8EAD4DB1F68D87500AECA96 /* SegmentedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedCell.xib; sourceTree = "<group>"; };
 		B8EAD4DF1F68F0BD00AECA96 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8EAD4E01F68F0BD00AECA96 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B8EAD4E21F68FF3300AECA96 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B8EAD4E41F691A6F00AECA96 /* OrderListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListTableViewController.h; sourceTree = "<group>"; };
+		B8EAD4E51F691A6F00AECA96 /* OrderListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListTableViewController.m; sourceTree = "<group>"; };
 		B8F7F9C41F6655F900A72E09 /* UserAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAPIClient.h; sourceTree = "<group>"; };
 		B8F7F9C51F66608800A72E09 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B8F7F9C71F66706600A72E09 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
-		B8F7F9C91F6684DB00A72E09 /* UserManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManagerDelegate.h; sourceTree = "<group>"; };
 		B8F7F9CA1F6685C400A72E09 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		B8FFB8ED1F677B34007A59DA /* InformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationCell.h; sourceTree = "<group>"; };
 		B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInformationTableViewCell.m; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 				B8EAD4E01F68F0BD00AECA96 /* AppDelegate.m */,
 				B8F7F9C31F6655AA00A72E09 /* User */,
 				6EBDF4321F66780C002FB1A6 /* Landing */,
+				B8EAD4E31F691A5900AECA96 /* Order */,
 				6EBDF43A1F680C6B002FB1A6 /* Tab Bar */,
 				B86D60771F662A7E002200D5 /* Profile */,
 				B86D606C1F661F15002200D5 /* Assets.xcassets */,
@@ -186,14 +190,23 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		B8EAD4E31F691A5900AECA96 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				B8EAD4E41F691A6F00AECA96 /* OrderListTableViewController.h */,
+				B8EAD4E51F691A6F00AECA96 /* OrderListTableViewController.m */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		B8F7F9C31F6655AA00A72E09 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				B8F7F9C41F6655F900A72E09 /* UserAPIClient.h */,
+				B8EAD4E21F68FF3300AECA96 /* User.h */,
 				B8F7F9C51F66608800A72E09 /* User.m */,
 				B8F7F9CA1F6685C400A72E09 /* UserManager.h */,
 				B8F7F9C71F66706600A72E09 /* UserManager.m */,
-				B8F7F9C91F6684DB00A72E09 /* UserManagerDelegate.h */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -232,7 +245,6 @@
 				TargetAttributes = {
 					B86D605C1F661F15002200D5 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2QFPTG9564;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -289,7 +301,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9DFB5B35EBB897CF5FEA0ADA /* [CP] Copy Pods Resources */ = {
@@ -344,6 +355,7 @@
 				B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */,
 				6EBDF43D1F680C88002FB1A6 /* TabBarViewController.m in Sources */,
 				6EBDF4371F6678F0002FB1A6 /* LandingViewController.m in Sources */,
+				B8EAD4E61F691A6F00AECA96 /* OrderListTableViewController.m in Sources */,
 				B86D60621F661F15002200D5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,7 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2QFPTG9564;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicklee.Patissier-ObjC";
@@ -476,7 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2QFPTG9564;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicklee.Patissier-ObjC";

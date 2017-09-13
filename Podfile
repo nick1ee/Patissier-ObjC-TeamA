@@ -8,5 +8,6 @@ target 'Patissier-ObjC' do
   # Pods for Patissier-ObjC
   pod 'FBSDKLoginKit', '4.26.0'
   pod 'AFNetworking', '~> 3.0'
+  pod 'SDWebImage', '4.1.0'
 
 end

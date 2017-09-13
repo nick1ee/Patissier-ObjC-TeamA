@@ -30,7 +30,7 @@
     [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     
     storeViewController = [[ProductCollectionViewController alloc]initWithCollectionViewLayout:aFlowLayout];
-    
+   
     storeViewController.view.backgroundColor = [UIColor yellowColor];
     
     storeViewController.tabBarItem.title = @"Store";

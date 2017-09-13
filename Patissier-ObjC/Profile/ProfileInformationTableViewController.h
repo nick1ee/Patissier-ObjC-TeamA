@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UserManagerDelegate.h"
+#import "UserManager.h"
 
-@interface ProfileInformationTableViewController : UITableViewController
+@interface ProfileInformationTableViewController : UITableViewController<UserManagerDelegate>
 
 @end

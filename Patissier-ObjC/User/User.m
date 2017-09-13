@@ -7,15 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User.h"
 
 // MARK: User
 
-typedef struct
-{
-    __unsafe_unretained NSString *userId;
-    __unsafe_unretained NSString *name;
-    __unsafe_unretained NSString *firstName;
-    __unsafe_unretained NSString *lastName;
-    __unsafe_unretained NSURL *pictureImageUrl;
+@implementation User
+
+- (instancetype) init:(NSMutableDictionary *)json {
     
-} User;
+    _userId = [json valueForKey: @"id"];
+    _firstName = [json valueForKey: @"first_name"];
+    _lastName = [json valueForKey: @"last_name"];
+    _name = [json valueForKey: @"name"];
+    
+    NSURL *imageUrl = [NSURL URLWithString: @"https://c1.staticflickr.com/5/4013/4452629067_c6d5388622_b.jpg"];
+    _pictureImageUrl = imageUrl;
+    
+    return self;
+    
+};
+
+
+@end

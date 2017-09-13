@@ -6,10 +6,14 @@
 //  Copyright © 2017年 nicklee. All rights reserved.
 //
 
-#import "UserManagerDelegate.h"
-#import "ProfileInformationTableViewController.h"
-#import "InformationCell.h"
+#import "User.h"
+#import "UserManager.h"
 #import "SegmentedCell.h"
+#import "InformationCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "ProfileInformationTableViewController.h"
+#import "OrderListTableViewController.h"
+#import "ProductCollectionViewController.h"
 
 // MARK: - Component
 
@@ -43,24 +47,18 @@ typedef enum {
 
 // MARK: Property
 
-NSArray *components;
 NSDictionary *unusedFavoriteProviderPool;
 NSDictionary *displayingFavoriteControllerPool;
 Segment *selectedSegment;
 UIButton *leftButton;
 UIButton *rightButton;
+UserManager *manager;
+OrderListTableViewController *orderListTableViewController;
+ProductCollectionViewController *productListTableViewController;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    components = [[NSArray alloc] initWithObjects:
-                  @(information),
-                  @(segmentedControler),
-                  @(content),
-                  nil];
-
-    selectedSegment = left;
 
     UINib *infoNib = [UINib nibWithNibName: @"InformationCell" bundle:nil];
 
@@ -69,15 +67,36 @@ UIButton *rightButton;
     UINib *segmentNib = [UINib nibWithNibName: @"SegmentedCell" bundle: nil];
 
     [self.tableView registerNib: segmentNib forCellReuseIdentifier: @"SegmentedCell"];
-
+    
+    orderListTableViewController = [[OrderListTableViewController alloc] init];
+    
+    [self addChildViewController: orderListTableViewController];
+    
+    [orderListTableViewController didMoveToParentViewController: self];
+    
+    productListTableViewController = [[ProductCollectionViewController alloc] init];
+    
+    [self addChildViewController: productListTableViewController];
+    
+    [productListTableViewController didMoveToParentViewController: self];
+    
+    selectedSegment = right;
+    
     self.tableView.estimatedRowHeight = 300.0;
-
+    
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    manager = [UserManager shared];
+    
+    manager.delegate = self;
+    
+    [manager fetchProfile];
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return components.count;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -104,7 +123,7 @@ UIButton *rightButton;
 
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-        [cell.leftButton setTitle: @"Favorited" forState: UIControlStateNormal];
+        [cell.leftButton setTitle: @"Favorite" forState: UIControlStateNormal];
 
         [cell.rightButton setTitle: @"Purchased" forState: UIControlStateNormal];
 
@@ -144,7 +163,7 @@ UIButton *rightButton;
 
     }else {
 
-        return self.view.frame.size.height - 350.0;
+        return 400.0;
 
     }
 
@@ -152,6 +171,10 @@ UIButton *rightButton;
 
 
 - (void) leftButtonClicked {
+    
+    selectedSegment = left;
+    
+    [self.tableView reloadData];
 
     leftButton.backgroundColor = [[UIColor alloc] initWithRed: 0 / 255.0  green: 0 / 255.0  blue: 0 / 255.0 alpha: 0.2];
 
@@ -160,6 +183,10 @@ UIButton *rightButton;
 }
 
 - (void) rightButtonClicked {
+    
+    selectedSegment = right;
+    
+    [self.tableView reloadData];
 
     leftButton.backgroundColor = [UIColor clearColor];
 
@@ -171,17 +198,45 @@ UIButton *rightButton;
 
     NSInteger index = indexPath.section;
 
-    if (index == 2) {
+    if (index == 0) {
 
+        InformationCell *displayCell = cell;
+        
+        displayCell.nameLabel.text = manager.currentUser.name;
+        
+        [displayCell.pictureImageView sd_setImageWithURL: manager.currentUser.pictureImageUrl];
 
-
-    } else {
+    } else if (index == 1) {
 
         return;
 
+    } else {
+        
+        if (selectedSegment == left) {
+            
+            [cell.contentView addSubview: productListTableViewController.view];
+            
+            
+        } else {
+            
+            [cell.contentView addSubview: orderListTableViewController.view];
+            
+        }
+
     }
+    
+}
 
+- (void)didFetchedProfile:(User *)user {
+    
+    [self.tableView reloadData];
+    
+}
 
+- (void)failure:(NSError *)error {
+    
+    NSLog(@"ERROR");
+    
 }
 
 @end

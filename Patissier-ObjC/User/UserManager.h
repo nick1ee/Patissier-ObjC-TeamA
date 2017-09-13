@@ -8,13 +8,28 @@
 
 // MARK: - UserManager
 
+#import "User.h"
 #import <Foundation/Foundation.h>
-#import "UserManagerDelegate.h"
+
+// MARK: - UserManagerDelegate
+
+@protocol UserManagerDelegate <NSObject>
+
+- (void) didFetchedProfile:(User *) user;
+- (void) failure:(NSError *) error;
+
+@end
+
 
 @interface UserManager : NSObject
 
 // MARK: Property
+@property(weak, nonatomic) id<UserManagerDelegate> delegate;
+@property(strong, nonatomic, readwrite) User *currentUser;
+
+// MARK: Method
 + (instancetype) shared;
+- (void)fetchProfile;
 
 @end
 
