@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ProfileInformationTableViewController.h
 //  Patissier-ObjC
 //
 //  Created by Nick Lee on 2017/9/11.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserManagerDelegate.h"
 
-@interface ViewController : UIViewController
-
+@interface ProfileInformationTableViewController : UITableViewController
 
 @end
-

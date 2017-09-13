@@ -7,48 +7,67 @@
 //
 
 #import "AppDelegate.h"
-#import "ProductCollectionViewController.h"
+#import "ProfileInformationTableViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "LandingViewController.h"
+#import "TabBarViewController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) TabBarViewController *tabBarcontroller;
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-//    
-//    UIViewController *initViewController = [[UIViewController alloc] init];
-//    
-//    self.window.rootViewController = initViewController;
-//    
-//    [self.window makeKeyAndVisible];
-    
-    
-    
-    UICollectionViewController*initViewController = [[UICollectionViewController alloc] init];
-  
-    UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
-    
-    [aFlowLayout setItemSize:CGSizeMake(154, 160)];
-    
-    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    
-    initViewController = [[ProductCollectionViewController alloc]initWithCollectionViewLayout:aFlowLayout];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+   
+    UIViewController *initViewController = [self makeEntryController];
+    
     self.window.rootViewController = initViewController;
     
     [self.window makeKeyAndVisible];
     
     return YES;
-    
+
     
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                  openURL:url
+                                                        sourceApplication:sourceApplication
+                                                               annotation:annotation
+                    ];
+    
+    return handled;
+}
+
+- (UIViewController *)makeEntryController {
+    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"jwtToken"] != nil)
+    {
+        
+        self.tabBarcontroller = [[TabBarViewController alloc] init];
+    
+        return _tabBarcontroller;
+
+    }
+    else
+    {
+    
+        LandingViewController *initViewController = [[UIStoryboard storyboardWithName:@"Landing" bundle:nil] instantiateViewControllerWithIdentifier: @"LandingViewController"];
+        
+        return initViewController;
+    }
+
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
