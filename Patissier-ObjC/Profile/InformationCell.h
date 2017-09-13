@@ -1,5 +1,5 @@
 //
-//  ProfileInformationTableViewCell.h
+//  InformationCell.h
 //  Patissier-ObjC
 //
 //  Created by Nick Lee on 2017/9/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileInformationTableViewCell : UITableViewCell
+@interface InformationCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *placeholderImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;

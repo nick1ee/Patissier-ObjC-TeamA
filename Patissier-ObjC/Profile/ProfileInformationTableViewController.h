@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UserManagerDelegate.h"
-#import "ProfileSegmentedControlTableViewCellDelegate.h"
 
-@interface ProfileInformationTableViewController : UITableViewController <ProfileSegmentedControlTableViewCellDelegate>
+@interface ProfileInformationTableViewController : UITableViewController
 
 @end

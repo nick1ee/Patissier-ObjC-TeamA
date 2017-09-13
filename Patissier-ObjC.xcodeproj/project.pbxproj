@@ -12,12 +12,10 @@
 		B86D60651F661F15002200D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60641F661F15002200D5 /* AppDelegate.m */; };
 		B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86D606C1F661F15002200D5 /* Assets.xcassets */; };
 		B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86D606E1F661F15002200D5 /* LaunchScreen.storyboard */; };
-		B86D607D1F6635B4002200D5 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D60781F6635B4002200D5 /* ProfileTableViewController.swift */; };
-		B86D607F1F6635B4002200D5 /* ProfileInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86D607A1F6635B4002200D5 /* ProfileInformationTableViewCell.xib */; };
-		B86D60801F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D607B1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.swift */; };
-		B86D60811F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86D607C1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.xib */; };
+		B86D607F1F6635B4002200D5 /* InformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86D607A1F6635B4002200D5 /* InformationCell.xib */; };
 		B86D60841F663969002200D5 /* ProfileInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60831F663969002200D5 /* ProfileInformationTableViewController.m */; };
-		B86D60871F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60861F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m */; };
+		B86D60871F663D09002200D5 /* SegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60861F663D09002200D5 /* SegmentedCell.m */; };
+		B8EAD4DC1F68D87500AECA96 /* SegmentedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EAD4DB1F68D87500AECA96 /* SegmentedCell.xib */; };
 		B8F7F9C61F66608800A72E09 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C51F66608800A72E09 /* User.m */; };
 		B8F7F9C81F66706600A72E09 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C71F66706600A72E09 /* UserManager.m */; };
 		B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */; };
@@ -33,22 +31,19 @@
 		B86D606C1F661F15002200D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B86D606F1F661F15002200D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B86D60711F661F15002200D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B86D60781F6635B4002200D5 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
-		B86D607A1F6635B4002200D5 /* ProfileInformationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileInformationTableViewCell.xib; sourceTree = "<group>"; };
-		B86D607B1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSegmentedControlTableViewCell.swift; sourceTree = "<group>"; };
-		B86D607C1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileSegmentedControlTableViewCell.xib; sourceTree = "<group>"; };
+		B86D607A1F6635B4002200D5 /* InformationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationCell.xib; sourceTree = "<group>"; };
 		B86D60821F663969002200D5 /* ProfileInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInformationTableViewController.h; sourceTree = "<group>"; };
 		B86D60831F663969002200D5 /* ProfileInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInformationTableViewController.m; sourceTree = "<group>"; };
-		B86D60851F663D09002200D5 /* ProfileSegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileSegmentedControlTableViewCell.h; sourceTree = "<group>"; };
-		B86D60861F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileSegmentedControlTableViewCell.m; sourceTree = "<group>"; };
+		B86D60851F663D09002200D5 /* SegmentedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedCell.h; sourceTree = "<group>"; };
+		B86D60861F663D09002200D5 /* SegmentedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedCell.m; sourceTree = "<group>"; };
+		B8EAD4DB1F68D87500AECA96 /* SegmentedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedCell.xib; sourceTree = "<group>"; };
 		B8F7F9C41F6655F900A72E09 /* UserAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAPIClient.h; sourceTree = "<group>"; };
 		B8F7F9C51F66608800A72E09 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B8F7F9C71F66706600A72E09 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		B8F7F9C91F6684DB00A72E09 /* UserManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManagerDelegate.h; sourceTree = "<group>"; };
 		B8F7F9CA1F6685C400A72E09 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
-		B8FFB8ED1F677B34007A59DA /* ProfileInformationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInformationTableViewCell.h; sourceTree = "<group>"; };
+		B8FFB8ED1F677B34007A59DA /* InformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationCell.h; sourceTree = "<group>"; };
 		B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInformationTableViewCell.m; sourceTree = "<group>"; };
-		B8FFB8F31F67FCF9007A59DA /* ProfileSegmentedControlTableViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileSegmentedControlTableViewCellDelegate.h; sourceTree = "<group>"; };
 		EB22659258DC1E777BB628BF /* Pods-Patissier-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,17 +120,14 @@
 		B86D60771F662A7E002200D5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				B86D60781F6635B4002200D5 /* ProfileTableViewController.swift */,
-				B86D607B1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.swift */,
 				B86D60821F663969002200D5 /* ProfileInformationTableViewController.h */,
 				B86D60831F663969002200D5 /* ProfileInformationTableViewController.m */,
-				B86D607C1F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.xib */,
-				B86D60851F663D09002200D5 /* ProfileSegmentedControlTableViewCell.h */,
-				B86D60861F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m */,
-				B86D607A1F6635B4002200D5 /* ProfileInformationTableViewCell.xib */,
-				B8FFB8ED1F677B34007A59DA /* ProfileInformationTableViewCell.h */,
+				B86D60851F663D09002200D5 /* SegmentedCell.h */,
+				B86D60861F663D09002200D5 /* SegmentedCell.m */,
+				B8EAD4DB1F68D87500AECA96 /* SegmentedCell.xib */,
+				B86D607A1F6635B4002200D5 /* InformationCell.xib */,
+				B8FFB8ED1F677B34007A59DA /* InformationCell.h */,
 				B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */,
-				B8FFB8F31F67FCF9007A59DA /* ProfileSegmentedControlTableViewCellDelegate.h */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -215,8 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */,
-				B86D607F1F6635B4002200D5 /* ProfileInformationTableViewCell.xib in Resources */,
-				B86D60811F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.xib in Resources */,
+				B86D607F1F6635B4002200D5 /* InformationCell.xib in Resources */,
+				B8EAD4DC1F68D87500AECA96 /* SegmentedCell.xib in Resources */,
 				B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,10 +271,8 @@
 				B86D60651F661F15002200D5 /* AppDelegate.m in Sources */,
 				B8F7F9C81F66706600A72E09 /* UserManager.m in Sources */,
 				B8F7F9C61F66608800A72E09 /* User.m in Sources */,
-				B86D60871F663D09002200D5 /* ProfileSegmentedControlTableViewCell.m in Sources */,
+				B86D60871F663D09002200D5 /* SegmentedCell.m in Sources */,
 				B86D60841F663969002200D5 /* ProfileInformationTableViewController.m in Sources */,
-				B86D607D1F6635B4002200D5 /* ProfileTableViewController.swift in Sources */,
-				B86D60801F6635B4002200D5 /* ProfileSegmentedControlTableViewCell.swift in Sources */,
 				B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */,
 				B86D60621F661F15002200D5 /* main.m in Sources */,
 			);
