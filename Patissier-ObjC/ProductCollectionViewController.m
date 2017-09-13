@@ -8,22 +8,32 @@
 
 #import "ProductCollectionViewController.h"
 #import "ProductCollectionViewCell.h"
+#import "APIClient.h"
+
 
 @interface ProductCollectionViewController () {
+   
     
 }
 
 @end
 
+
 @implementation ProductCollectionViewController
 
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor redColor];
-    NSLog(@"123123");
+    APIClient *client = [APIClient new];
     
+    client.delegate = self;
+    //[delegate :self]
+    
+    [client getProductInformation];
+    
+    self.view.backgroundColor = [UIColor redColor];
     
     UINib *nib = [UINib nibWithNibName:@"ProductCollectionViewCell" bundle:nil];
     
@@ -34,6 +44,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)didGetValue:(id)value {
+    
+
+    NSLog(@"%@",value);
+    
+    
+    
+    
+    
 }
 
 /*
@@ -64,7 +85,9 @@
     ProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor whiteColor];
-    cell.priceLabel.text = @"123123";
+    cell.priceLabel.text = @"120";
+    cell.titleLabel.text = @"巧克力杯子蛋糕";
+    
     
     
     

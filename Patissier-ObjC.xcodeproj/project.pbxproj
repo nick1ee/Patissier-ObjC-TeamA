@@ -17,6 +17,7 @@
 		BE5DA7581F66821A005E92F6 /* ProductCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5DA7571F66821A005E92F6 /* ProductCollectionViewController.m */; };
 		BEB618101F67C0E20021542E /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB6180E1F67C0E20021542E /* ProductCollectionViewCell.m */; };
 		BEB618111F67C0E20021542E /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB6180F1F67C0E20021542E /* ProductCollectionViewCell.xib */; };
+		BEB618161F68D94A0021542E /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB618151F68D94A0021542E /* Product.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		BEB6180D1F67C0E20021542E /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
 		BEB6180E1F67C0E20021542E /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
 		BEB6180F1F67C0E20021542E /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		BEB618151F68D94A0021542E /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		BEB618171F68D95A0021542E /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		EB22659258DC1E777BB628BF /* Pods-Patissier-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +133,8 @@
 				BEB6180D1F67C0E20021542E /* ProductCollectionViewCell.h */,
 				BEB6180E1F67C0E20021542E /* ProductCollectionViewCell.m */,
 				BEB6180F1F67C0E20021542E /* ProductCollectionViewCell.xib */,
+				BEB618151F68D94A0021542E /* Product.m */,
+				BEB618171F68D95A0021542E /* Product.h */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB618161F68D94A0021542E /* Product.m in Sources */,
 				B86D60681F661F15002200D5 /* ViewController.m in Sources */,
 				BEB618101F67C0E20021542E /* ProductCollectionViewCell.m in Sources */,
 				B86D60651F661F15002200D5 /* AppDelegate.m in Sources */,

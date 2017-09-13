@@ -7,25 +7,35 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "APIClient.h"
 
-@interface APIClient: NSObject
 
-@property NSString *firstName;
+@protocol GetProduct
+
+-(void)didGetValue:(id)value;
+-(void)didNotGetValue:(NSString*)value;
 
 @end
 
 
-@interface APIClient()
+@interface APIClient: NSObject <GetProduct>
+{
+    id <GetProduct> delegate;
+}
+
+@property (weak, nonatomic) id <GetProduct> delegate;
+
+
+@property NSString *firstName;
 
 //括號裡面是資料回傳型態
 -(void)indexProducts;
 //要改成拿回東西的型態
+
 -(void)getProductInformation;
 
 
-
 @end
+
 
 
 

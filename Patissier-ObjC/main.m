@@ -17,9 +17,9 @@
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         
-        APIClient *client = [APIClient new];
-        [client indexProducts];
-        [client getProductInformation];
+//        APIClient *client = [APIClient new];
+//        [client indexProducts];
+//        [client getProductInformation];
         
         
     

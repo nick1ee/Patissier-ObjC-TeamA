@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "APIClient.h"
 
-@interface ProductCollectionViewController : UICollectionViewController
+@interface ProductCollectionViewController: UICollectionViewController<GetProduct>
 
+@property (weak, nonatomic) id<GetProduct> delegate;
 
+@property (strong, nonatomic) APIClient *apiClient;
 
+//@property
 
 @end
