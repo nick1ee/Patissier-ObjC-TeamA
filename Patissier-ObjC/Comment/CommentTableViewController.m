@@ -36,9 +36,9 @@ NSArray *commentComponents;
     
     [self setupTableView];
     
-    self.tableView.estimatedRowHeight = 150.0;
-    
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
+//    self.tableView.estimatedRowHeight = 150.0;
+//    
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
 }
 
@@ -68,18 +68,112 @@ NSArray *commentComponents;
     return commentComponents.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return 1;
+    return 200.0;
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    switch ([indexPath section]) {
+        case productDetails:
+            
+            return 133.0;
+            
+        case separateLine:
+            
+            return 20.0;
+            
+        case comment:
+            
+            return UITableViewAutomaticDimension;
+            
+        default:
+            
+            return 0.0;
+    }
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+//    NSInteger component = commentComponents[section];
+    
+    switch (section) {
+        case productDetails:
+            
+            return 1;
+            
+        case separateLine:
+            
+            return 1;
+            
+        case comment:
+            
+            return 2;
+            
+        default:
+            
+            break;
+            
+    }
+    
+    return 0;
+
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ProductDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProductDetailsTableViewCell" forIndexPath:indexPath];
     
+    id cellToReturn = nil;
     
+    switch ([indexPath section]) {
+        case productDetails:
+        {
+            
+            static NSString *ProductDetailCellIdentifier = @"ProductDetailsTableViewCell";
+            
+            ProductDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProductDetailCellIdentifier forIndexPath:indexPath];
+            
+            [cell.buyProductButton setTitle:@"Add to Cart" forState:UIControlStateNormal];
+            
+            cellToReturn = cell;
+            
+        }
+            break;
+            
+        case separateLine:
+        {
+            
+            static NSString *SeparateLineCellIdentifier = @"SeparateLineTableViewCell";
+            
+            SeparateLineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SeparateLineCellIdentifier forIndexPath:indexPath];
+            
+            cell.tittleLabel.text = @"Comments";
+            
+            cellToReturn = cell;
+            
+        }
+            break;
+            
+        case comment:
+        {
+        
+            static NSString *CommentCellIdentifier = @"CommentTableViewCell";
+            
+            CommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CommentCellIdentifier forIndexPath:indexPath];
+            
+            
+            cellToReturn = cell;
+            
+        }
+            
+            break;
+    }
     
-    return cell;
+    return cellToReturn;
+    
 }
 
 

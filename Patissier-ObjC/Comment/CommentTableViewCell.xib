@@ -50,6 +50,7 @@
                     <constraint firstItem="qe4-1y-zuL" firstAttribute="leading" secondItem="pjz-sn-DuW" secondAttribute="trailing" constant="20" id="WpG-z3-1zP"/>
                     <constraint firstItem="pjz-sn-DuW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="h3i-9D-w42"/>
                     <constraint firstItem="met-pM-OhG" firstAttribute="top" secondItem="qe4-1y-zuL" secondAttribute="bottom" constant="8" id="iFv-2k-oTS"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="met-pM-OhG" secondAttribute="bottom" constant="18" id="ikx-0g-06j"/>
                     <constraint firstItem="qe4-1y-zuL" firstAttribute="top" secondItem="pjz-sn-DuW" secondAttribute="top" id="vsC-Fz-7yF"/>
                 </constraints>
             </tableViewCellContentView>
