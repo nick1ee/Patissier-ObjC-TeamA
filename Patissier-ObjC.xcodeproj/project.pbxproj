@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		6EBDF4361F6678F0002FB1A6 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDF4331F6678F0002FB1A6 /* Landing.storyboard */; };
 		6EBDF4371F6678F0002FB1A6 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF4351F6678F0002FB1A6 /* LandingViewController.m */; };
-		6EBDF4391F67C31C002FB1A6 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF4381F67C31C002FB1A6 /* Facebook.m */; };
+		6EBDF43D1F680C88002FB1A6 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF43C1F680C88002FB1A6 /* TabBarViewController.m */; };
+		6EBDF4451F68246F002FB1A6 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF4441F68246E002FB1A6 /* CollectionViewController.m */; };
 		92FFF151412EFB5CC7463908 /* libPods-Patissier-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 565732C763E8BE2AB00540D6 /* libPods-Patissier-ObjC.a */; };
 		B86D60621F661F15002200D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60611F661F15002200D5 /* main.m */; };
 		B86D60651F661F15002200D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60641F661F15002200D5 /* AppDelegate.m */; };
@@ -22,7 +23,10 @@
 		6EBDF4331F6678F0002FB1A6 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Landing.storyboard; path = "Patissier-ObjC/Landing/Landing.storyboard"; sourceTree = SOURCE_ROOT; };
 		6EBDF4341F6678F0002FB1A6 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandingViewController.h; path = "Patissier-ObjC/Landing/LandingViewController.h"; sourceTree = SOURCE_ROOT; };
 		6EBDF4351F6678F0002FB1A6 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingViewController.m; path = "Patissier-ObjC/Landing/LandingViewController.m"; sourceTree = SOURCE_ROOT; };
-		6EBDF4381F67C31C002FB1A6 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Facebook.m; path = Facebook/Facebook.m; sourceTree = "<group>"; };
+		6EBDF43B1F680C7D002FB1A6 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = "Tab Bar/TabBarViewController.h"; sourceTree = SOURCE_ROOT; };
+		6EBDF43C1F680C88002FB1A6 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = "Tab Bar/TabBarViewController.m"; sourceTree = SOURCE_ROOT; };
+		6EBDF4431F68246E002FB1A6 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewController.h; path = Profile/CollectionViewController.h; sourceTree = SOURCE_ROOT; };
+		6EBDF4441F68246E002FB1A6 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewController.m; path = Profile/CollectionViewController.m; sourceTree = SOURCE_ROOT; };
 		74719BED495C763CC0788E93 /* Pods-Patissier-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		B86D605D1F661F15002200D5 /* Patissier-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patissier-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86D60611F661F15002200D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +67,17 @@
 				6EBDF4351F6678F0002FB1A6 /* LandingViewController.m */,
 			);
 			name = Landing;
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		6EBDF43A1F680C6B002FB1A6 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				6EBDF43B1F680C7D002FB1A6 /* TabBarViewController.h */,
+				6EBDF43C1F680C88002FB1A6 /* TabBarViewController.m */,
+			);
+			name = "Tab Bar";
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		770AB3C367885ADD49EF152D /* Frameworks */ = {
@@ -94,7 +109,8 @@
 		B86D605F1F661F15002200D5 /* Patissier-ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				6EBDF4381F67C31C002FB1A6 /* Facebook.m */,
+				6EBDF4321F66780C002FB1A6 /* Landing */,
+				6EBDF43A1F680C6B002FB1A6 /* Tab Bar */,
 				B86D60771F662A7E002200D5 /* Profile */,
 				B86D60631F661F15002200D5 /* AppDelegate.h */,
 				B86D60641F661F15002200D5 /* AppDelegate.m */,
@@ -117,7 +133,8 @@
 		B86D60771F662A7E002200D5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				6EBDF4321F66780C002FB1A6 /* Landing */,
+				6EBDF4431F68246E002FB1A6 /* CollectionViewController.h */,
+				6EBDF4441F68246E002FB1A6 /* CollectionViewController.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -251,10 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EBDF4451F68246F002FB1A6 /* CollectionViewController.m in Sources */,
+				6EBDF43D1F680C88002FB1A6 /* TabBarViewController.m in Sources */,
 				B86D60651F661F15002200D5 /* AppDelegate.m in Sources */,
 				6EBDF4371F6678F0002FB1A6 /* LandingViewController.m in Sources */,
 				B86D60621F661F15002200D5 /* main.m in Sources */,
-				6EBDF4391F67C31C002FB1A6 /* Facebook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
