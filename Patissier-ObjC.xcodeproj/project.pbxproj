@@ -178,6 +178,7 @@
 				TargetAttributes = {
 					B86D605C1F661F15002200D5 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = EQ43V2KPAV;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -390,6 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = EQ43V2KPAV;
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicklee.Patissier-ObjC";
@@ -405,6 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = EQ43V2KPAV;
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicklee.Patissier-ObjC";
