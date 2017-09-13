@@ -26,9 +26,15 @@
 		B86D60871F663D09002200D5 /* SegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60861F663D09002200D5 /* SegmentedCell.m */; };
 		B8EAD4DC1F68D87500AECA96 /* SegmentedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EAD4DB1F68D87500AECA96 /* SegmentedCell.xib */; };
 		B8EAD4E11F68F0BD00AECA96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAD4E01F68F0BD00AECA96 /* AppDelegate.m */; };
+		B8EAD4E61F691A6F00AECA96 /* OrderListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAD4E51F691A6F00AECA96 /* OrderListTableViewController.m */; };
 		B8F7F9C61F66608800A72E09 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C51F66608800A72E09 /* User.m */; };
 		B8F7F9C81F66706600A72E09 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C71F66706600A72E09 /* UserManager.m */; };
 		B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */; };
+		BEAE9A781F690B31004ED99B /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAE9A721F690B31004ED99B /* Product.m */; };
+		BEAE9A791F690B31004ED99B /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAE9A741F690B31004ED99B /* ProductCollectionViewCell.m */; };
+		BEAE9A7A1F690B31004ED99B /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEAE9A751F690B31004ED99B /* ProductCollectionViewCell.xib */; };
+		BEAE9A7B1F690B31004ED99B /* ProductCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAE9A771F690B31004ED99B /* ProductCollectionViewController.m */; };
+		BEAE9A7E1F690B58004ED99B /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAE9A7D1F690B58004ED99B /* APIClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,13 +69,24 @@
 		B8EAD4DB1F68D87500AECA96 /* SegmentedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedCell.xib; sourceTree = "<group>"; };
 		B8EAD4DF1F68F0BD00AECA96 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8EAD4E01F68F0BD00AECA96 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B8EAD4E21F68FF3300AECA96 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B8EAD4E41F691A6F00AECA96 /* OrderListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListTableViewController.h; sourceTree = "<group>"; };
+		B8EAD4E51F691A6F00AECA96 /* OrderListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListTableViewController.m; sourceTree = "<group>"; };
 		B8F7F9C41F6655F900A72E09 /* UserAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAPIClient.h; sourceTree = "<group>"; };
 		B8F7F9C51F66608800A72E09 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B8F7F9C71F66706600A72E09 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
-		B8F7F9C91F6684DB00A72E09 /* UserManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManagerDelegate.h; sourceTree = "<group>"; };
 		B8F7F9CA1F6685C400A72E09 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		B8FFB8ED1F677B34007A59DA /* InformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationCell.h; sourceTree = "<group>"; };
 		B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInformationTableViewCell.m; sourceTree = "<group>"; };
+		BEAE9A711F690B31004ED99B /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		BEAE9A721F690B31004ED99B /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		BEAE9A731F690B31004ED99B /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
+		BEAE9A741F690B31004ED99B /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
+		BEAE9A751F690B31004ED99B /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		BEAE9A761F690B31004ED99B /* ProductCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewController.h; sourceTree = "<group>"; };
+		BEAE9A771F690B31004ED99B /* ProductCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewController.m; sourceTree = "<group>"; };
+		BEAE9A7C1F690B58004ED99B /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		BEAE9A7D1F690B58004ED99B /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		EB22659258DC1E777BB628BF /* Pods-Patissier-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,11 +179,21 @@
 		B86D605F1F661F15002200D5 /* Patissier-ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				BEAE9A711F690B31004ED99B /* Product.h */,
+				BEAE9A721F690B31004ED99B /* Product.m */,
+				BEAE9A731F690B31004ED99B /* ProductCollectionViewCell.h */,
+				BEAE9A741F690B31004ED99B /* ProductCollectionViewCell.m */,
+				BEAE9A751F690B31004ED99B /* ProductCollectionViewCell.xib */,
+				BEAE9A761F690B31004ED99B /* ProductCollectionViewController.h */,
+				BEAE9A771F690B31004ED99B /* ProductCollectionViewController.m */,
+				BEAE9A7C1F690B58004ED99B /* APIClient.h */,
+				BEAE9A7D1F690B58004ED99B /* APIClient.m */,
 				B8EAD4DF1F68F0BD00AECA96 /* AppDelegate.h */,
 				B8EAD4E01F68F0BD00AECA96 /* AppDelegate.m */,
 				6EBDF4491F68FD7F002FB1A6 /* Comment */,
 				B8F7F9C31F6655AA00A72E09 /* User */,
 				6EBDF4321F66780C002FB1A6 /* Landing */,
+				B8EAD4E31F691A5900AECA96 /* Order */,
 				6EBDF43A1F680C6B002FB1A6 /* Tab Bar */,
 				B86D60771F662A7E002200D5 /* Profile */,
 				B86D606C1F661F15002200D5 /* Assets.xcassets */,
@@ -200,14 +227,23 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		B8EAD4E31F691A5900AECA96 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				B8EAD4E41F691A6F00AECA96 /* OrderListTableViewController.h */,
+				B8EAD4E51F691A6F00AECA96 /* OrderListTableViewController.m */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		B8F7F9C31F6655AA00A72E09 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				B8F7F9C41F6655F900A72E09 /* UserAPIClient.h */,
+				B8EAD4E21F68FF3300AECA96 /* User.h */,
 				B8F7F9C51F66608800A72E09 /* User.m */,
 				B8F7F9CA1F6685C400A72E09 /* UserManager.h */,
 				B8F7F9C71F66706600A72E09 /* UserManager.m */,
-				B8F7F9C91F6684DB00A72E09 /* UserManagerDelegate.h */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -246,7 +282,6 @@
 				TargetAttributes = {
 					B86D605C1F661F15002200D5 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2QFPTG9564;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -279,6 +314,7 @@
 				B86D607F1F6635B4002200D5 /* InformationCell.xib in Resources */,
 				6EBDF46A1F692369002FB1A6 /* SeparateLineTableViewCell.xib in Resources */,
 				6EBDF4631F691F93002FB1A6 /* ProductDetailsTableViewCell.xib in Resources */,
+				BEAE9A7A1F690B31004ED99B /* ProductCollectionViewCell.xib in Resources */,
 				B8EAD4DC1F68D87500AECA96 /* SegmentedCell.xib in Resources */,
 				6EBDF4361F6678F0002FB1A6 /* Landing.storyboard in Resources */,
 				B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */,
@@ -348,16 +384,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8F7F9C81F66706600A72E09 /* UserManager.m in Sources */,
+				BEAE9A7E1F690B58004ED99B /* APIClient.m in Sources */,
+				BEAE9A791F690B31004ED99B /* ProductCollectionViewCell.m in Sources */,
 				B8F7F9C61F66608800A72E09 /* User.m in Sources */,
 				B8EAD4E11F68F0BD00AECA96 /* AppDelegate.m in Sources */,
 				6EBDF46E1F69260B002FB1A6 /* CommentTableViewCell.m in Sources */,
 				B86D60871F663D09002200D5 /* SegmentedCell.m in Sources */,
+				BEAE9A7B1F690B31004ED99B /* ProductCollectionViewController.m in Sources */,
+				BEAE9A781F690B31004ED99B /* Product.m in Sources */,
 				B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */,
 				6EBDF43D1F680C88002FB1A6 /* TabBarViewController.m in Sources */,
 				6EBDF4671F692200002FB1A6 /* SeparateLineTableViewCell.m in Sources */,
 				6EBDF4521F69130A002FB1A6 /* ProfileInformationTableViewController.m in Sources */,
 				6EBDF4621F691F93002FB1A6 /* ProductDetailsTableViewCell.m in Sources */,
 				6EBDF4371F6678F0002FB1A6 /* LandingViewController.m in Sources */,
+				B8EAD4E61F691A6F00AECA96 /* OrderListTableViewController.m in Sources */,
 				B86D60621F661F15002200D5 /* main.m in Sources */,
 				6EBDF45E1F691DF8002FB1A6 /* CommentTableViewController.m in Sources */,
 			);
@@ -478,7 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2QFPTG9564;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
@@ -530,7 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 2QFPTG9564;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;

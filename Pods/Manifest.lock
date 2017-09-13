@@ -24,17 +24,22 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.26.0):
     - FBSDKCoreKit
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - FBSDKLoginKit (= 4.26.0)
+  - SDWebImage (= 4.1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FBSDKCoreKit: c8b8582311ec11b145451d8b9717dc6cc2ae5a76
   FBSDKLoginKit: f3f03b94c21eb834af243c0a881d48641f47ca60
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
 
-PODFILE CHECKSUM: 4e42898ab2a5bf1377ee4281239cf023aa8c8020
+PODFILE CHECKSUM: 78225fe0c6c44bf22b8d333092db85dafa9d9673
 
 COCOAPODS: 1.3.1
