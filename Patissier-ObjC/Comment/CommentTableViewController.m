@@ -8,6 +8,8 @@
 
 #import "CommentTableViewController.h"
 #import "ProductDetailsTableViewCell.h"
+#import "SeparateLineTableViewCell.h"
+#import "CommentTableViewCell.h"
 
 typedef enum {
     
@@ -47,9 +49,17 @@ NSArray *commentComponents;
 
 - (void)setupTableView {
     
-    UINib *productDetailsNib = [ UINib nibWithNibName: @"ProductDetailsTableViewCell" bundle:nil];
+    UINib *productDetailsNib = [UINib nibWithNibName: @"ProductDetailsTableViewCell" bundle:nil];
     
     [self.tableView registerNib:productDetailsNib forCellReuseIdentifier: @"ProductDetailsTableViewCell"];
+    
+    UINib *separateLineNib = [UINib nibWithNibName:@"SeparateLineTableViewCell" bundle:nil];
+    
+    [self.tableView registerNib:separateLineNib forCellReuseIdentifier:@"SeparateLineTableViewCell"];
+    
+    UINib *commentNib = [UINib nibWithNibName:@"CommentTableViewCell" bundle:nil];
+    
+    [self.tableView registerNib:commentNib forCellReuseIdentifier:@"CommentTableViewCell"];
 
 }
 

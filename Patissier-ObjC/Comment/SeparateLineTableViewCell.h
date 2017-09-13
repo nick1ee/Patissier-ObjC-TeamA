@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface separateLineTableViewCell : UITableViewCell
+@interface SeparateLineTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *topLeftSeparatorLineView;
 

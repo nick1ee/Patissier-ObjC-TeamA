@@ -6,9 +6,9 @@
 //  Copyright © 2017年 nicklee. All rights reserved.
 //
 
-#import "separateLineTableViewCell.h"
+#import "SeparateLineTableViewCell.h"
 
-@implementation separateLineTableViewCell
+@implementation SeparateLineTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
