@@ -10,6 +10,7 @@
 #import "ProfileInformationTableViewController.h"
 #import "ProductCollectionViewController.h"
 
+
 @interface TabBarViewController ()
 
 @end
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+
     UICollectionViewController *storeViewController = [[UICollectionViewController alloc] init];
     
     UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
