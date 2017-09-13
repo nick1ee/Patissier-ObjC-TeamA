@@ -8,6 +8,7 @@
 
 #import "TabBarViewController.h"
 #import "ProfileInformationTableViewController.h"
+#import "CommentTableViewController.h"
 
 @interface TabBarViewController ()
 
@@ -40,7 +41,20 @@
     
     UINavigationController *navigationViewControllerProfile = [[UINavigationController alloc] initWithRootViewController:profileViewController];
     
-    NSArray *tabBreViewControllers = @[navigationViewControllerStore, navigationViewControllerProfile];
+    //////
+    CommentTableViewController *commentViewController = [[CommentTableViewController alloc] init];
+    
+    commentViewController.tabBarItem.title = @"Comment";
+    
+    commentViewController.title = @"Comment";
+    
+    commentViewController.tabBarItem.image = [UIImage imageNamed:@"icon-profile-selected"];
+    
+    UINavigationController *navigationViewControllerComment = [[UINavigationController alloc] initWithRootViewController:commentViewController];
+    
+    //////
+    
+    NSArray *tabBreViewControllers = @[navigationViewControllerStore, navigationViewControllerProfile, navigationViewControllerComment];
     
     [self setViewControllers:tabBreViewControllers animated:YES];
 

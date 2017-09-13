@@ -10,12 +10,15 @@
 		6EBDF4361F6678F0002FB1A6 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDF4331F6678F0002FB1A6 /* Landing.storyboard */; };
 		6EBDF4371F6678F0002FB1A6 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF4351F6678F0002FB1A6 /* LandingViewController.m */; };
 		6EBDF43D1F680C88002FB1A6 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF43C1F680C88002FB1A6 /* TabBarViewController.m */; };
+		6EBDF4521F69130A002FB1A6 /* ProfileInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF4511F69130A002FB1A6 /* ProfileInformationTableViewController.m */; };
+		6EBDF45E1F691DF8002FB1A6 /* CommentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF45D1F691DF8002FB1A6 /* CommentTableViewController.m */; };
+		6EBDF4621F691F93002FB1A6 /* ProductDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF4601F691F93002FB1A6 /* ProductDetailsTableViewCell.m */; };
+		6EBDF4631F691F93002FB1A6 /* ProductDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDF4611F691F93002FB1A6 /* ProductDetailsTableViewCell.xib */; };
 		92FFF151412EFB5CC7463908 /* libPods-Patissier-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 565732C763E8BE2AB00540D6 /* libPods-Patissier-ObjC.a */; };
 		B86D60621F661F15002200D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60611F661F15002200D5 /* main.m */; };
 		B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86D606C1F661F15002200D5 /* Assets.xcassets */; };
 		B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86D606E1F661F15002200D5 /* LaunchScreen.storyboard */; };
 		B86D607F1F6635B4002200D5 /* InformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86D607A1F6635B4002200D5 /* InformationCell.xib */; };
-		B86D60841F663969002200D5 /* ProfileInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60831F663969002200D5 /* ProfileInformationTableViewController.m */; };
 		B86D60871F663D09002200D5 /* SegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60861F663D09002200D5 /* SegmentedCell.m */; };
 		B8EAD4DC1F68D87500AECA96 /* SegmentedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EAD4DB1F68D87500AECA96 /* SegmentedCell.xib */; };
 		B8EAD4E11F68F0BD00AECA96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAD4E01F68F0BD00AECA96 /* AppDelegate.m */; };
@@ -31,6 +34,13 @@
 		6EBDF4351F6678F0002FB1A6 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandingViewController.m; path = "Patissier-ObjC/Landing/LandingViewController.m"; sourceTree = SOURCE_ROOT; };
 		6EBDF43B1F680C7D002FB1A6 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = "Tab Bar/TabBarViewController.h"; sourceTree = SOURCE_ROOT; };
 		6EBDF43C1F680C88002FB1A6 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = "Tab Bar/TabBarViewController.m"; sourceTree = SOURCE_ROOT; };
+		6EBDF4501F6912FF002FB1A6 /* ProfileInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInformationTableViewController.h; sourceTree = "<group>"; };
+		6EBDF4511F69130A002FB1A6 /* ProfileInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInformationTableViewController.m; sourceTree = "<group>"; };
+		6EBDF45C1F691DF8002FB1A6 /* CommentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentTableViewController.h; path = Comment/CommentTableViewController.h; sourceTree = "<group>"; };
+		6EBDF45D1F691DF8002FB1A6 /* CommentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentTableViewController.m; path = Comment/CommentTableViewController.m; sourceTree = "<group>"; };
+		6EBDF45F1F691F93002FB1A6 /* ProductDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductDetailsTableViewCell.h; path = Comment/ProductDetailsTableViewCell.h; sourceTree = "<group>"; };
+		6EBDF4601F691F93002FB1A6 /* ProductDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductDetailsTableViewCell.m; path = Comment/ProductDetailsTableViewCell.m; sourceTree = "<group>"; };
+		6EBDF4611F691F93002FB1A6 /* ProductDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductDetailsTableViewCell.xib; path = Comment/ProductDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		74719BED495C763CC0788E93 /* Pods-Patissier-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		B86D605D1F661F15002200D5 /* Patissier-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patissier-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86D60611F661F15002200D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -38,8 +48,6 @@
 		B86D606F1F661F15002200D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B86D60711F661F15002200D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B86D607A1F6635B4002200D5 /* InformationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationCell.xib; sourceTree = "<group>"; };
-		B86D60821F663969002200D5 /* ProfileInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileInformationTableViewController.h; sourceTree = "<group>"; };
-		B86D60831F663969002200D5 /* ProfileInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInformationTableViewController.m; sourceTree = "<group>"; };
 		B86D60851F663D09002200D5 /* SegmentedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedCell.h; sourceTree = "<group>"; };
 		B86D60861F663D09002200D5 /* SegmentedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedCell.m; sourceTree = "<group>"; };
 		B8EAD4DB1F68D87500AECA96 /* SegmentedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedCell.xib; sourceTree = "<group>"; };
@@ -97,6 +105,18 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		6EBDF4491F68FD7F002FB1A6 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				6EBDF45C1F691DF8002FB1A6 /* CommentTableViewController.h */,
+				6EBDF45D1F691DF8002FB1A6 /* CommentTableViewController.m */,
+				6EBDF45F1F691F93002FB1A6 /* ProductDetailsTableViewCell.h */,
+				6EBDF4601F691F93002FB1A6 /* ProductDetailsTableViewCell.m */,
+				6EBDF4611F691F93002FB1A6 /* ProductDetailsTableViewCell.xib */,
+			);
+			name = Comment;
+			sourceTree = "<group>";
+		};
 		770AB3C367885ADD49EF152D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,11 +148,10 @@
 			children = (
 				B8EAD4DF1F68F0BD00AECA96 /* AppDelegate.h */,
 				B8EAD4E01F68F0BD00AECA96 /* AppDelegate.m */,
+				6EBDF4491F68FD7F002FB1A6 /* Comment */,
 				B8F7F9C31F6655AA00A72E09 /* User */,
 				6EBDF4321F66780C002FB1A6 /* Landing */,
 				6EBDF43A1F680C6B002FB1A6 /* Tab Bar */,
-				B86D60631F661F15002200D5 /* AppDelegate.h */,
-				B86D60641F661F15002200D5 /* AppDelegate.m */,
 				B86D60771F662A7E002200D5 /* Profile */,
 				B86D606C1F661F15002200D5 /* Assets.xcassets */,
 				B86D606E1F661F15002200D5 /* LaunchScreen.storyboard */,
@@ -153,8 +172,8 @@
 		B86D60771F662A7E002200D5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				B86D60821F663969002200D5 /* ProfileInformationTableViewController.h */,
-				B86D60831F663969002200D5 /* ProfileInformationTableViewController.m */,
+				6EBDF4501F6912FF002FB1A6 /* ProfileInformationTableViewController.h */,
+				6EBDF4511F69130A002FB1A6 /* ProfileInformationTableViewController.m */,
 				B86D60851F663D09002200D5 /* SegmentedCell.h */,
 				B86D60861F663D09002200D5 /* SegmentedCell.m */,
 				B8EAD4DB1F68D87500AECA96 /* SegmentedCell.xib */,
@@ -242,6 +261,7 @@
 			files = (
 				B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */,
 				B86D607F1F6635B4002200D5 /* InformationCell.xib in Resources */,
+				6EBDF4631F691F93002FB1A6 /* ProductDetailsTableViewCell.xib in Resources */,
 				B8EAD4DC1F68D87500AECA96 /* SegmentedCell.xib in Resources */,
 				6EBDF4361F6678F0002FB1A6 /* Landing.storyboard in Resources */,
 				B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */,
@@ -313,11 +333,13 @@
 				B8F7F9C61F66608800A72E09 /* User.m in Sources */,
 				B8EAD4E11F68F0BD00AECA96 /* AppDelegate.m in Sources */,
 				B86D60871F663D09002200D5 /* SegmentedCell.m in Sources */,
-				B86D60841F663969002200D5 /* ProfileInformationTableViewController.m in Sources */,
 				B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */,
 				6EBDF43D1F680C88002FB1A6 /* TabBarViewController.m in Sources */,
+				6EBDF4521F69130A002FB1A6 /* ProfileInformationTableViewController.m in Sources */,
+				6EBDF4621F691F93002FB1A6 /* ProductDetailsTableViewCell.m in Sources */,
 				6EBDF4371F6678F0002FB1A6 /* LandingViewController.m in Sources */,
 				B86D60621F661F15002200D5 /* main.m in Sources */,
+				6EBDF45E1F691DF8002FB1A6 /* CommentTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +403,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7s";
 			};
 			name = Debug;
 		};
@@ -421,9 +444,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7s";
 			};
 			name = Release;
 		};
@@ -436,10 +461,46 @@
 				DEVELOPMENT_TEAM = 2QFPTG9564;
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"Bolts\"",
+					"-l\"FBSDKCoreKit\"",
+					"-l\"FBSDKLoginKit\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicklee.Patissier-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Debug;
 		};
@@ -452,9 +513,45 @@
 				DEVELOPMENT_TEAM = 2QFPTG9564;
 				INFOPLIST_FILE = "Patissier-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"Bolts\"",
+					"-l\"FBSDKCoreKit\"",
+					"-l\"FBSDKLoginKit\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nicklee.Patissier-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Release;
 		};
