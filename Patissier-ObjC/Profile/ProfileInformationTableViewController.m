@@ -12,6 +12,8 @@
 #import "InformationCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "ProfileInformationTableViewController.h"
+#import "OrderListTableViewController.h"
+#import "ProductCollectionViewController.h"
 
 // MARK: - Component
 
@@ -51,12 +53,12 @@ Segment *selectedSegment;
 UIButton *leftButton;
 UIButton *rightButton;
 UserManager *manager;
+OrderListTableViewController *orderListTableViewController;
+ProductCollectionViewController *productListTableViewController;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    selectedSegment = left;
 
     UINib *infoNib = [UINib nibWithNibName: @"InformationCell" bundle:nil];
 
@@ -65,9 +67,23 @@ UserManager *manager;
     UINib *segmentNib = [UINib nibWithNibName: @"SegmentedCell" bundle: nil];
 
     [self.tableView registerNib: segmentNib forCellReuseIdentifier: @"SegmentedCell"];
-
+    
+    orderListTableViewController = [[OrderListTableViewController alloc] init];
+    
+    [self addChildViewController: orderListTableViewController];
+    
+    [orderListTableViewController didMoveToParentViewController: self];
+    
+    productListTableViewController = [[ProductCollectionViewController alloc] init];
+    
+    [self addChildViewController: productListTableViewController];
+    
+    [productListTableViewController didMoveToParentViewController: self];
+    
+    selectedSegment = right;
+    
     self.tableView.estimatedRowHeight = 300.0;
-
+    
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     manager = [UserManager shared];
@@ -107,7 +123,7 @@ UserManager *manager;
 
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
-        [cell.leftButton setTitle: @"Favorited" forState: UIControlStateNormal];
+        [cell.leftButton setTitle: @"Favorite" forState: UIControlStateNormal];
 
         [cell.rightButton setTitle: @"Purchased" forState: UIControlStateNormal];
 
@@ -147,7 +163,7 @@ UserManager *manager;
 
     }else {
 
-        return self.view.frame.size.height - 350.0;
+        return 400.0;
 
     }
 
@@ -155,6 +171,10 @@ UserManager *manager;
 
 
 - (void) leftButtonClicked {
+    
+    selectedSegment = left;
+    
+    [self.tableView reloadData];
 
     leftButton.backgroundColor = [[UIColor alloc] initWithRed: 0 / 255.0  green: 0 / 255.0  blue: 0 / 255.0 alpha: 0.2];
 
@@ -163,6 +183,10 @@ UserManager *manager;
 }
 
 - (void) rightButtonClicked {
+    
+    selectedSegment = right;
+    
+    [self.tableView reloadData];
 
     leftButton.backgroundColor = [UIColor clearColor];
 
@@ -182,9 +206,22 @@ UserManager *manager;
         
         [displayCell.pictureImageView sd_setImageWithURL: manager.currentUser.pictureImageUrl];
 
-    } else {
+    } else if (index == 1) {
 
         return;
+
+    } else {
+        
+        if (selectedSegment == left) {
+            
+            [cell.contentView addSubview: productListTableViewController.view];
+            
+            
+        } else {
+            
+            [cell.contentView addSubview: orderListTableViewController.view];
+            
+        }
 
     }
     
