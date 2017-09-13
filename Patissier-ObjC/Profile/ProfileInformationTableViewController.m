@@ -136,7 +136,7 @@ UIButton *rightButton;
 
     if (index == 0) {
 
-        return 300.0;
+        return 250.0;
 
     }else if (index == 1) {
 
