@@ -25,6 +25,8 @@
     
     storeViewController.title = @"Store";
     
+    storeViewController.tabBarItem.image = [UIImage imageNamed:@"icon-store"];
+    
     UINavigationController *navigationViewControllerStore = [[UINavigationController alloc] initWithRootViewController:storeViewController];
     
     UIViewController *profileViewController = [[UIViewController alloc] init];
@@ -34,6 +36,8 @@
     profileViewController.tabBarItem.title = @"Profile";
     
     profileViewController.title = @"Profile";
+    
+    profileViewController.tabBarItem.image = [UIImage imageNamed:@"icon-profile-selected"];
     
     UINavigationController *navigationViewControllerProfile = [[UINavigationController alloc] initWithRootViewController:profileViewController];
     

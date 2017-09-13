@@ -9,10 +9,11 @@
 #import "LandingViewController.h"
 #import "FBSDKLoginKit.h"
 #import "FBSDKCoreKit.h"
+#import "TabBarViewController.h"
 
 @interface LandingViewController ()
 
-
+@property (nonatomic, strong) TabBarViewController *tabBarcontroller;
 
 @end
 
@@ -132,9 +133,6 @@
              if ([result.grantedPermissions containsObject:@"email"])
              {
                  
-//                 NSLog(@"result is: %@", result);
-//                 NSLog(@"Token is available : %@", [[FBSDKAccessToken currentAccessToken]tokenString]);
-                 
                  NSMutableDictionary *jsonTokenDict = [[NSMutableDictionary alloc] init];
                  
                  [jsonTokenDict setObject:[[FBSDKAccessToken currentAccessToken]tokenString] forKey:@"access_token"];
@@ -173,6 +171,14 @@
                      [[NSUserDefaults standardUserDefaults] setValue:jsonToken forKey:@"jwtToken"];
                      
                      [[NSUserDefaults standardUserDefaults] synchronize];
+                     
+//                     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+                     
+                     self.tabBarcontroller = [[TabBarViewController alloc] init];
+                     
+                     [self presentViewController:_tabBarcontroller animated:YES completion:nil];
+                     
+//                     self.window.rootViewController = _tabBarcontroller;
                      
 //                     NSLog(@"2222222222%@", [[NSUserDefaults standardUserDefaults] stringForKey:@"jwtToken"]);
                      

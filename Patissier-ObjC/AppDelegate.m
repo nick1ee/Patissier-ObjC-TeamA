@@ -54,8 +54,6 @@
     {
         
         self.tabBarcontroller = [[TabBarViewController alloc] init];
-        
-        
     
         return _tabBarcontroller;
         
