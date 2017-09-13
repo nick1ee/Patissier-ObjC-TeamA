@@ -14,6 +14,8 @@
 		6EBDF45E1F691DF8002FB1A6 /* CommentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF45D1F691DF8002FB1A6 /* CommentTableViewController.m */; };
 		6EBDF4621F691F93002FB1A6 /* ProductDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF4601F691F93002FB1A6 /* ProductDetailsTableViewCell.m */; };
 		6EBDF4631F691F93002FB1A6 /* ProductDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDF4611F691F93002FB1A6 /* ProductDetailsTableViewCell.xib */; };
+		6EBDF4671F692200002FB1A6 /* separateLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EBDF4651F692200002FB1A6 /* separateLineTableViewCell.m */; };
+		6EBDF46A1F692369002FB1A6 /* separateLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDF4691F692369002FB1A6 /* separateLineTableViewCell.xib */; };
 		92FFF151412EFB5CC7463908 /* libPods-Patissier-ObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 565732C763E8BE2AB00540D6 /* libPods-Patissier-ObjC.a */; };
 		B86D60621F661F15002200D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D60611F661F15002200D5 /* main.m */; };
 		B86D606D1F661F15002200D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B86D606C1F661F15002200D5 /* Assets.xcassets */; };
@@ -41,6 +43,9 @@
 		6EBDF45F1F691F93002FB1A6 /* ProductDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductDetailsTableViewCell.h; path = Comment/ProductDetailsTableViewCell.h; sourceTree = "<group>"; };
 		6EBDF4601F691F93002FB1A6 /* ProductDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductDetailsTableViewCell.m; path = Comment/ProductDetailsTableViewCell.m; sourceTree = "<group>"; };
 		6EBDF4611F691F93002FB1A6 /* ProductDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductDetailsTableViewCell.xib; path = Comment/ProductDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		6EBDF4641F692200002FB1A6 /* separateLineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = separateLineTableViewCell.h; sourceTree = "<group>"; };
+		6EBDF4651F692200002FB1A6 /* separateLineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = separateLineTableViewCell.m; sourceTree = "<group>"; };
+		6EBDF4691F692369002FB1A6 /* separateLineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = separateLineTableViewCell.xib; sourceTree = "<group>"; };
 		74719BED495C763CC0788E93 /* Pods-Patissier-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		B86D605D1F661F15002200D5 /* Patissier-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Patissier-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86D60611F661F15002200D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,6 +115,9 @@
 			children = (
 				6EBDF45C1F691DF8002FB1A6 /* CommentTableViewController.h */,
 				6EBDF45D1F691DF8002FB1A6 /* CommentTableViewController.m */,
+				6EBDF4641F692200002FB1A6 /* separateLineTableViewCell.h */,
+				6EBDF4651F692200002FB1A6 /* separateLineTableViewCell.m */,
+				6EBDF4691F692369002FB1A6 /* separateLineTableViewCell.xib */,
 				6EBDF45F1F691F93002FB1A6 /* ProductDetailsTableViewCell.h */,
 				6EBDF4601F691F93002FB1A6 /* ProductDetailsTableViewCell.m */,
 				6EBDF4611F691F93002FB1A6 /* ProductDetailsTableViewCell.xib */,
@@ -261,6 +269,7 @@
 			files = (
 				B86D60701F661F15002200D5 /* LaunchScreen.storyboard in Resources */,
 				B86D607F1F6635B4002200D5 /* InformationCell.xib in Resources */,
+				6EBDF46A1F692369002FB1A6 /* separateLineTableViewCell.xib in Resources */,
 				6EBDF4631F691F93002FB1A6 /* ProductDetailsTableViewCell.xib in Resources */,
 				B8EAD4DC1F68D87500AECA96 /* SegmentedCell.xib in Resources */,
 				6EBDF4361F6678F0002FB1A6 /* Landing.storyboard in Resources */,
@@ -335,6 +344,7 @@
 				B86D60871F663D09002200D5 /* SegmentedCell.m in Sources */,
 				B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */,
 				6EBDF43D1F680C88002FB1A6 /* TabBarViewController.m in Sources */,
+				6EBDF4671F692200002FB1A6 /* separateLineTableViewCell.m in Sources */,
 				6EBDF4521F69130A002FB1A6 /* ProfileInformationTableViewController.m in Sources */,
 				6EBDF4621F691F93002FB1A6 /* ProductDetailsTableViewCell.m in Sources */,
 				6EBDF4371F6678F0002FB1A6 /* LandingViewController.m in Sources */,
