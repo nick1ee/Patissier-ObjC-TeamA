@@ -38,13 +38,6 @@
     
 }
 
-//- (void)viewDidLayoutSubviews {
-//    [super viewDidLayoutSubviews];
-//    
-//     _gradientLayer.frame = backgroundGradientView.bounds;
-//    
-//}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
@@ -99,11 +92,7 @@
     
     gradientMask.startPoint = CGPointMake(0.5, 0.0);
     
-//    [backgroundGradientView.layer addSublayer: gradientLayer];
-    
     [_backgroundGradientView.layer insertSublayer: gradientLayer atIndex:0];
-    
-//    [backgroundGradientView addSubview: gradientMask];
     
 }
 
@@ -111,7 +100,7 @@
     
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
     
-    [login logInWithReadPermissions:@[@"email"] fromViewController:self handler:^(FBSDKLoginManagerLoginResult *result, NSError *error)
+    [login logInWithReadPermissions:@[@"email"] fromViewController: self handler: ^(FBSDKLoginManagerLoginResult *result, NSError *error)
      {
          
          if (error)
@@ -135,52 +124,44 @@
                  
                  NSMutableDictionary *jsonTokenDict = [[NSMutableDictionary alloc] init];
                  
-                 [jsonTokenDict setObject:[[FBSDKAccessToken currentAccessToken]tokenString] forKey:@"access_token"];
+                 [jsonTokenDict setObject:[[FBSDKAccessToken currentAccessToken]tokenString] forKey: @"access_token"];
                  
                  NSData* jsonData = [NSJSONSerialization dataWithJSONObject: jsonTokenDict options: kNilOptions error: &error];
                  
                  NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
                  
-                 [request setURL:[NSURL URLWithString:@"http://52.198.40.72/patissier/api/v1/sign_in/facebook"]];
+                 [request setURL:[NSURL URLWithString: @"http://52.198.40.72/patissier/api/v1/sign_in/facebook"]];
                  
-                 [request setHTTPMethod:@"POST"];
+                 [request setHTTPMethod: @"POST"];
                  
-                 [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+                 [request setValue: @"application/json" forHTTPHeaderField:@"Content-Type"];
                  
-                 [request setHTTPBody:jsonData];
+                 [request setHTTPBody: jsonData];
                  
                  NSURLSessionConfiguration *defaultSessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
                  
-                 NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultSessionConfiguration];
+                 NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultSessionConfiguration];
                  
-                 NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                 NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithRequest: request completionHandler: ^(NSData *data, NSURLResponse *response, NSError *error) {
                      
                      if(error)
                      {
                          NSLog(@"JSONObjectWithData error: %@", error);
                      }
                      
-                     NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                     NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData: data options:NSJSONReadingMutableContainers error:nil];
                      
-                     NSArray *jsonData = [jsonObject objectForKey:@"data"];
+                     NSArray *jsonData = [jsonObject objectForKey: @"data"];
                      
-                     NSString *jsonToken = [jsonData valueForKey:@"token"];
+                     NSString *jsonToken = [jsonData valueForKey: @"token"];
                      
-//                     NSLog(@"111111%@", jsonToken);
-                     
-                     [[NSUserDefaults standardUserDefaults] setValue:jsonToken forKey:@"jwtToken"];
+                     [[NSUserDefaults standardUserDefaults] setValue: jsonToken forKey: @"jwtToken"];
                      
                      [[NSUserDefaults standardUserDefaults] synchronize];
                      
-//                     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-                     
                      self.tabBarcontroller = [[TabBarViewController alloc] init];
                      
-                     [self presentViewController:_tabBarcontroller animated:YES completion:nil];
-                     
-//                     self.window.rootViewController = _tabBarcontroller;
-                     
-//                     NSLog(@"2222222222%@", [[NSUserDefaults standardUserDefaults] stringForKey:@"jwtToken"]);
+                     [self presentViewController: _tabBarcontroller animated: YES completion: nil];
                      
                  }];
                  
