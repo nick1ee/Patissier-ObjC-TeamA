@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ProfileInformationTableViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "LandingViewController.h"
 #import "TabBarViewController.h"
@@ -22,9 +23,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
-    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
+   
     UIViewController *initViewController = [self makeEntryController];
     
     self.window.rootViewController = initViewController;
@@ -56,7 +57,7 @@
         self.tabBarcontroller = [[TabBarViewController alloc] init];
     
         return _tabBarcontroller;
-        
+
     }
     else
     {

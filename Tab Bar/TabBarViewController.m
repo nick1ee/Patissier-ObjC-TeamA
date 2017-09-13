@@ -7,6 +7,7 @@
 //
 
 #import "TabBarViewController.h"
+#import "ProfileInformationTableViewController.h"
 
 @interface TabBarViewController ()
 
@@ -29,9 +30,7 @@
     
     UINavigationController *navigationViewControllerStore = [[UINavigationController alloc] initWithRootViewController:storeViewController];
     
-    UIViewController *profileViewController = [[UIViewController alloc] init];
-    
-    profileViewController.view.backgroundColor = [UIColor blueColor];
+    ProfileInformationTableViewController *profileViewController = [[ProfileInformationTableViewController alloc] init];
     
     profileViewController.tabBarItem.title = @"Profile";
     
