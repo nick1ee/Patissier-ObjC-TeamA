@@ -6,24 +6,15 @@
 //  Copyright © 2017年 nicklee. All rights reserved.
 //
 
-#ifndef Product_h
-#define Product_h
-#import <Foundation/Foundation.h>
+#import "Foundation/Foundation.h"
 
-@interface NSObject (Product)
+@interface Product : NSObject
 
-@property NSString *identification;
+@property (strong, nonatomic, readonly) NSString *productId;
+@property (strong, nonatomic, readonly) NSString *productName;
+@property (strong, nonatomic, readonly) NSString *productPrice;
+@property (strong, nonatomic, readonly) NSURL *productImageUrl;
 
-@property NSString *productName;
-
-@property int *productPrice;
-
-@property (assign, nonatomic) NSString *imageurl;
-
-//@property NSString *firstName;
-
+- (instancetype) init: (NSDictionary *) json;
 
 @end
-
-
-#endif /* Product_h */

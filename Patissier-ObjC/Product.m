@@ -7,3 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Product.h"
+
+// MARK: User
+
+@implementation Product
+
+- (instancetype) init:(NSMutableDictionary *)json {
+    
+    _productId = [json valueForKey: @"id"];
+    _productName = [json valueForKey: @"product_name"];
+    _productPrice = [json valueForKey: @"product_price"];
+    _productImageUrl = [json valueForKey: @"product_Imageurl"];
+    
+    return self;
+    
+};
+
+
+@end
