@@ -10,10 +10,10 @@
 
 @interface Product : NSObject
 
-@property (strong, nonatomic, readonly) NSString *productId;
-@property (strong, nonatomic, readonly) NSString *productName;
-@property (strong, nonatomic, readonly) NSString *productPrice;
-@property (strong, nonatomic, readonly) NSURL *productImageUrl;
+@property (strong, nonatomic) NSString *productId;
+@property (strong, nonatomic) NSString *productName;
+@property (strong, nonatomic) NSString *productPrice;
+@property (strong, nonatomic) NSURL *productImageUrl;
 
 - (instancetype) init: (NSDictionary *) json;
 
