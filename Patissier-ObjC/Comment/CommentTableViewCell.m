@@ -23,6 +23,8 @@
     
     image.layer.cornerRadius = image.frame.size.width/2;
     
+    image.layer.masksToBounds = YES;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

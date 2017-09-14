@@ -12,6 +12,7 @@
 #import "CommentTableViewCell.h"
 #import "APIClient.h"
 #import "Comment.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 typedef enum {
     
@@ -190,6 +191,10 @@ NSArray *commentComponents;
             cell.commentUserNameLabel.text = comments[indexPath.row].commentUserName;
             
             cell.commentUserContentLabel.text = comments[indexPath.row].commentContent;
+            
+            NSString *url = [[NSString alloc] initWithFormat:@"http://52.198.40.72/patissier/users/%@/picture.jpg",comments[indexPath.row].commentUserId];
+            
+            [cell.commentUserImageView sd_setImageWithURL:url];
             
             cellToReturn = cell;
             
