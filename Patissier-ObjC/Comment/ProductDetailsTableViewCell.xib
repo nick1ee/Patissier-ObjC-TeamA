@@ -57,6 +57,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="WJu-Np-Y9T" firstAttribute="leading" secondItem="KH3-41-NkE" secondAttribute="trailing" constant="10" id="3YF-5g-Fhl"/>
+                    <constraint firstItem="h42-tG-dkn" firstAttribute="bottom" secondItem="KH3-41-NkE" secondAttribute="bottom" id="5Oa-D2-r5R"/>
                     <constraint firstItem="WJu-Np-Y9T" firstAttribute="top" secondItem="3kl-Cs-BWR" secondAttribute="topMargin" constant="20" id="9Yo-Cg-3Jm"/>
                     <constraint firstItem="vYd-Ib-sx6" firstAttribute="bottom" secondItem="h42-tG-dkn" secondAttribute="bottom" id="GpR-6V-gb7"/>
                     <constraint firstItem="KH3-41-NkE" firstAttribute="leading" secondItem="3kl-Cs-BWR" secondAttribute="leadingMargin" constant="20" id="KvJ-cO-Z1X"/>
