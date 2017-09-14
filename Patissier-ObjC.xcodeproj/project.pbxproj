@@ -25,6 +25,7 @@
 		B8EAD50C1F6A1EF400AECA96 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EAD5031F6A1EF400AECA96 /* ProductCollectionViewCell.xib */; };
 		B8EAD50D1F6A1EF400AECA96 /* ProductCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAD5051F6A1EF400AECA96 /* ProductCollectionViewController.m */; };
 		B8EAD50E1F6A1EF400AECA96 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAD5081F6A1EF400AECA96 /* APIClient.m */; };
+		B8EAD5121F6A648900AECA96 /* GradientNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAD5111F6A648900AECA96 /* GradientNavigationController.m */; };
 		B8F7F9C61F66608800A72E09 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C51F66608800A72E09 /* User.m */; };
 		B8F7F9C81F66706600A72E09 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C71F66706600A72E09 /* UserManager.m */; };
 		B8FFB8EF1F677B34007A59DA /* InformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFB8EE1F677B34007A59DA /* InformationCell.m */; };
@@ -63,6 +64,8 @@
 		B8EAD5051F6A1EF400AECA96 /* ProductCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewController.m; sourceTree = "<group>"; };
 		B8EAD5071F6A1EF400AECA96 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		B8EAD5081F6A1EF400AECA96 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		B8EAD5101F6A648900AECA96 /* GradientNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientNavigationController.h; sourceTree = "<group>"; };
+		B8EAD5111F6A648900AECA96 /* GradientNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientNavigationController.m; sourceTree = "<group>"; };
 		B8F7F9C41F6655F900A72E09 /* UserAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAPIClient.h; sourceTree = "<group>"; };
 		B8F7F9C51F66608800A72E09 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B8F7F9C71F66706600A72E09 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 		B86D605F1F661F15002200D5 /* Patissier-ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				B8EAD50F1F6A644100AECA96 /* Navigation */,
 				B8EAD4FB1F6A1EF400AECA96 /* AppDelegate */,
 				B8EAD4FE1F6A1EF400AECA96 /* Product */,
 				B8EAD5061F6A1EF400AECA96 /* APIClient */,
@@ -221,6 +225,15 @@
 				B8EAD5081F6A1EF400AECA96 /* APIClient.m */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		B8EAD50F1F6A644100AECA96 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				B8EAD5101F6A648900AECA96 /* GradientNavigationController.h */,
+				B8EAD5111F6A648900AECA96 /* GradientNavigationController.m */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		B8F7F9C31F6655AA00A72E09 /* User */ = {
@@ -373,6 +386,7 @@
 				B8EAD50A1F6A1EF400AECA96 /* Product.m in Sources */,
 				B86D60871F663D09002200D5 /* SegmentedCell.m in Sources */,
 				B86D60841F663969002200D5 /* ProfileInformationTableViewController.m in Sources */,
+				B8EAD5121F6A648900AECA96 /* GradientNavigationController.m in Sources */,
 				B8EAD5091F6A1EF400AECA96 /* AppDelegate.m in Sources */,
 				B8FFB8EF1F677B34007A59DA /* InformationCell.m in Sources */,
 				6EBDF43D1F680C88002FB1A6 /* TabBarViewController.m in Sources */,

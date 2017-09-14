@@ -7,6 +7,7 @@
 //
 
 #import "TabBarViewController.h"
+#import "GradientNavigationController.h"
 #import "ProfileInformationTableViewController.h"
 #import "ProductCollectionViewController.h"
 
@@ -36,7 +37,9 @@
     
     storeViewController.tabBarItem.image = [UIImage imageNamed:@"icon-store"];
     
-    UINavigationController *navigationViewControllerStore = [[UINavigationController alloc] initWithRootViewController:storeViewController];
+    GradientNavigationController *navigationViewControllerStore = [[GradientNavigationController alloc] initWithRootViewController:storeViewController];
+    
+    [navigationViewControllerStore.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObject: [UIColor whiteColor] forKey: NSForegroundColorAttributeName]];
     
     ProfileInformationTableViewController *profileViewController = [[ProfileInformationTableViewController alloc] init];
     
@@ -46,29 +49,14 @@
     
     profileViewController.tabBarItem.image = [UIImage imageNamed:@"icon-profile-selected"];
     
-    UINavigationController *navigationViewControllerProfile = [[UINavigationController alloc] initWithRootViewController:profileViewController];
+    GradientNavigationController *navigationViewControllerProfile = [[GradientNavigationController alloc] initWithRootViewController:profileViewController];
+    
+    [navigationViewControllerProfile.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObject: [UIColor whiteColor] forKey: NSForegroundColorAttributeName]];
     
     NSArray *tabBreViewControllers = @[navigationViewControllerStore, navigationViewControllerProfile];
     
     [self setViewControllers:tabBreViewControllers animated:YES];
 
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

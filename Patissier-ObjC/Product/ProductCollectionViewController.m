@@ -77,7 +77,7 @@
     
     NSString *mystring =  [proudctsInfo[indexPath.row].productPrice stringValue];
     
-    cell.priceLabel.text = mystring;
+    cell.priceLabel.text = [@"$" stringByAppendingString: mystring];
     
     cell.titleLabel.text = proudctsInfo[indexPath.row].productName;
     
