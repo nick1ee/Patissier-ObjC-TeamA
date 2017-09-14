@@ -15,4 +15,6 @@
 
 @property (strong, nonatomic) APIClient *apiClient;
 
+@property (weak, nonatomic) NSString *productId;
+
 @end

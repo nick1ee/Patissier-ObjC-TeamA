@@ -11,6 +11,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "APIClient.h"
 #import "Product.h"
+#import "CommentTableViewController.h"
 
 
 @interface ProductCollectionViewController () {
@@ -95,12 +96,22 @@
     return UIEdgeInsetsMake(20, 25, 20, 25);
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
-//    if (  )
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    NSLog(@"%li %li",(long)indexPath.section,indexPath.row);
     
+    NSLog(@"%@", proudctsInfo[indexPath.row].productId );
     
+    CommentTableViewController *commentTableViewController = [[CommentTableViewController alloc] init];
+    
+    commentTableViewController.productId = proudctsInfo[indexPath.row].productId;
+    
+    [self presentViewController:commentTableViewController animated:true completion:nil];
     
 }
 

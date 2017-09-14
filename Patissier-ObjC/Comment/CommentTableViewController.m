@@ -47,7 +47,7 @@ NSArray *commentComponents;
     
     client.commentDelegate = self;
     
-    [client getProductComment:@"5947974173a7f08ded3e8269"];
+    [client getProductComment: _productId];
     
     //5947974173a7f08ded3e8269
     
@@ -157,6 +157,10 @@ NSArray *commentComponents;
             ProductDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProductDetailCellIdentifier forIndexPath:indexPath];
             
             [cell setSelectionStyle: UITableViewCellSelectionStyleNone];
+            
+            NSString *url = [[NSString alloc] initWithFormat:@"http://52.198.40.72/patissier/products/%@/preview.jpg", _productId];
+            
+            [cell.productImageView sd_setImageWithURL: url];
             
             cellToReturn = cell;
             
