@@ -19,19 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 
-    UICollectionViewController *storeViewController = [[UICollectionViewController alloc] init];
+    ProductCollectionViewController *storeViewController = [[ProductCollectionViewController alloc] init];
     
-    UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
+    UICollectionViewFlowLayout *flowlayout = [[UICollectionViewFlowLayout alloc] init];
     
-    [aFlowLayout setItemSize:CGSizeMake(154, 160)];
+    [flowlayout setItemSize:CGSizeMake(154, 160)];
     
-    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    [flowlayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     
-    storeViewController = [[ProductCollectionViewController alloc]initWithCollectionViewLayout:aFlowLayout];
-   
-    storeViewController.view.backgroundColor = [UIColor yellowColor];
+    storeViewController = [[ProductCollectionViewController alloc]initWithCollectionViewLayout:flowlayout];
     
     storeViewController.tabBarItem.title = @"Store";
     
