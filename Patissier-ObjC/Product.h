@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) NSString *productId;
 @property (strong, nonatomic) NSString *productName;
-@property (strong, nonatomic) NSString *productPrice;
+@property (strong, nonatomic) NSNumber *productPrice;
 //@property (strong, nonatomic) NSURL* productImageUrl;
 - (NSURL *) imageURL;
 

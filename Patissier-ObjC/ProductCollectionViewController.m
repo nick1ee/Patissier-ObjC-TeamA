@@ -88,7 +88,8 @@
     ProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor whiteColor];
-    //cell.priceLabel.text = proudctsInfo[indexPath.row].productPrice;
+    NSString *mystring =  [proudctsInfo[indexPath.row].productPrice stringValue];
+    cell.priceLabel.text = mystring;
     cell.titleLabel.text = proudctsInfo[indexPath.row].productName;
     
     
