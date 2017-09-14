@@ -19,9 +19,9 @@
 
 - (void)getProductInformation{
 
-    NSMutableDictionary *products;
+    NSMutableArray *productsInfo = [[NSMutableArray alloc] init];
     
-    NSString *URLString = @"http://52.198.40.72/patissier/api/v1/products";
+    NSString *URLString = @"http://52.198.40.72/patissier/products";
    
     [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:URLString parameters:nil error:nil];
     
@@ -43,33 +43,16 @@
                 Product *productInformation = [[Product alloc] init];
                 
                 productInformation.productId = [product objectForKey: @"id"];
-                productInformation.productName = [product objectForKey: @"product_name"];
-                productInformation.productId = [product objectForKey: @"product_price"];
-                productInformation.productId = [product objectForKey: @"product_Imageurl"];
-                
-                
-                
-                
-                NSLog(@"%@",productInformation.productId);
+                productInformation.productName = [product objectForKey: @"name"];
+                productInformation.productPrice = [product objectForKey: @"price"];
+                [productsInfo addObject: productInformation];
+                //NSLog(@"%@",productInformation.productPrice);
                 
             }
             
-            //NSDictionary *data = [NSJSONSerialization JSONObjectWithData: responseObject options:NSJSONReadingMutableContainers error: nil];
-            
-            
-            
-            
-            
-            
         }
-        
-        
-        
-        
-        
 
-                
-        [self.delegate didGetValue:(responseObject)];
+        [self.delegate didGetValue:(productsInfo)];
         
         NSLog(@"JSON: %@ 成功", responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {

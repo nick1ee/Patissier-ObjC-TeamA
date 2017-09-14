@@ -18,11 +18,19 @@
     _productId = [json valueForKey: @"id"];
     _productName = [json valueForKey: @"product_name"];
     _productPrice = [json valueForKey: @"product_price"];
-    _productImageUrl = [json valueForKey: @"product_Imageurl"];
-    
+
     return self;
     
 };
+
+- (NSURL *) imageURL {
+    
+    NSString *urlString = [NSString stringWithFormat: @"http://52.198.40.72/patissier/products/%@/preview.jpg", self.productId];
+    
+    return [NSURL URLWithString: urlString];
+}
+
+
 
 
 @end

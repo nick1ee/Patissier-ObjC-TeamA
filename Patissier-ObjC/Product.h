@@ -13,7 +13,8 @@
 @property (strong, nonatomic) NSString *productId;
 @property (strong, nonatomic) NSString *productName;
 @property (strong, nonatomic) NSString *productPrice;
-@property (strong, nonatomic) NSURL *productImageUrl;
+//@property (strong, nonatomic) NSURL* productImageUrl;
+- (NSURL *) imageURL;
 
 - (instancetype) init: (NSDictionary *) json;
 
