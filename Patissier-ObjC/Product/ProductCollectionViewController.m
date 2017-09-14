@@ -8,6 +8,7 @@
 
 #import "ProductCollectionViewController.h"
 #import "ProductCollectionViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "APIClient.h"
 #import "Product.h"
 
@@ -72,10 +73,15 @@
     ProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor whiteColor];
+    
     NSString *mystring =  [proudctsInfo[indexPath.row].productPrice stringValue];
+    
     cell.priceLabel.text = mystring;
+    
     cell.titleLabel.text = proudctsInfo[indexPath.row].productName;
     
+    [cell.productImageView sd_setImageWithURL: proudctsInfo[indexPath.row].imageURL];
+     
     return cell;
 }
 
