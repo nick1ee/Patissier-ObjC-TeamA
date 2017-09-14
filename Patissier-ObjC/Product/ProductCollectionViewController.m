@@ -9,10 +9,12 @@
 #import "ProductCollectionViewController.h"
 #import "ProductCollectionViewCell.h"
 #import "APIClient.h"
+#import "Product.h"
 
 
 @interface ProductCollectionViewController () {
    
+    NSArray <__kindof Product *> *proudctsInfo;
     
 }
 
@@ -46,8 +48,9 @@
 
 -(void)didGetValue:(id)value {
     
-
-    NSLog(@"%@",value);
+    proudctsInfo = value;
+    
+    [self.collectionView reloadData];
 
 }
 
@@ -60,7 +63,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return 10;
+    return proudctsInfo.count;;
 
 }
 
@@ -69,8 +72,9 @@
     ProductCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor whiteColor];
-    cell.priceLabel.text = @"$120";
-    cell.titleLabel.text = @"巧克力杯子蛋糕";
+    NSString *mystring =  [proudctsInfo[indexPath.row].productPrice stringValue];
+    cell.priceLabel.text = mystring;
+    cell.titleLabel.text = proudctsInfo[indexPath.row].productName;
     
     return cell;
 }
