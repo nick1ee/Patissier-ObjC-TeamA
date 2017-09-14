@@ -18,7 +18,6 @@
 
 @property (weak, nonatomic) IBOutlet UIView *bottomRightSeparatorLine;
 
-@property (weak, nonatomic) IBOutlet UILabel *tittleLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

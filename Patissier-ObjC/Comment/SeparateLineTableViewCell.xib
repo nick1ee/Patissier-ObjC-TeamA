@@ -107,7 +107,7 @@
             <connections>
                 <outlet property="bottomLeftSeparatorLine" destination="pWL-ZN-Uei" id="DVk-JM-N2t"/>
                 <outlet property="bottomRightSeparatorLine" destination="3a0-PE-vFW" id="HO5-GC-HdQ"/>
-                <outlet property="tittleLabel" destination="EU4-jp-8ii" id="RGn-ko-dm1"/>
+                <outlet property="titleLabel" destination="EU4-jp-8ii" id="ZdY-QG-Fwq"/>
                 <outlet property="topLeftSeparatorLineView" destination="g8Y-aC-AhY" id="7Uq-pH-49H"/>
                 <outlet property="topRightSeparatorLineView" destination="PmJ-dA-xqV" id="Q79-HT-xuT"/>
             </connections>

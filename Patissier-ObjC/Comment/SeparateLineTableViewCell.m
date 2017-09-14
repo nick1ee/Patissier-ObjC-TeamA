@@ -10,9 +10,20 @@
 
 @implementation SeparateLineTableViewCell
 
+@synthesize titleLabel;
+
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    [self setupTitleLabel];
+}
+
+- (void)setupTitleLabel {
+
+    UILabel *label = titleLabel;
+    
+    label.text = @"Comments";
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -60,6 +60,9 @@ NSArray *commentComponents;
     UINib *commentNib = [UINib nibWithNibName:@"CommentTableViewCell" bundle:nil];
     
     [self.tableView registerNib:commentNib forCellReuseIdentifier:@"CommentTableViewCell"];
+    
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
 
 }
 
@@ -97,8 +100,6 @@ NSArray *commentComponents;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-//    NSInteger component = commentComponents[section];
     
     switch (section) {
         case productDetails:
@@ -138,6 +139,8 @@ NSArray *commentComponents;
             
             [cell.buyProductButton setTitle:@"Add to Cart" forState:UIControlStateNormal];
             
+            [cell setSelectionStyle: UITableViewCellSelectionStyleNone];
+            
             cellToReturn = cell;
             
         }
@@ -150,7 +153,7 @@ NSArray *commentComponents;
             
             SeparateLineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SeparateLineCellIdentifier forIndexPath:indexPath];
             
-            cell.tittleLabel.text = @"Comments";
+            [cell setSelectionStyle: UITableViewCellSelectionStyleNone];
             
             cellToReturn = cell;
             
@@ -164,6 +167,7 @@ NSArray *commentComponents;
             
             CommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CommentCellIdentifier forIndexPath:indexPath];
             
+            [cell setSelectionStyle: UITableViewCellSelectionStyleNone];
             
             cellToReturn = cell;
             
