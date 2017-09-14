@@ -64,11 +64,13 @@
     //    -(void)didNotGetValue:(NSString*)value;
 }
 
-- (void)getProductComment {
+- (void)getProductComment:(NSString*)productID {
 
     NSMutableArray *productComments = [[NSMutableArray alloc] init];
     
-    NSString *URLString = @"http://52.198.40.72/patissier/api/v1/products/5947974173a7f08ded3e8269/comments";
+    NSString *URLString = [[NSString alloc] initWithFormat:@"http://52.198.40.72/patissier/api/v1/products/%@/comments", productID];
+    
+//    NSString *URLString = [initWithFormat[@"http://52.198.40.72/patissier/api/v1/products/%@/comments", *productID]];
     
     [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:URLString parameters:nil error:nil];
     

@@ -46,7 +46,9 @@ NSArray *commentComponents;
     
     client.commentDelegate = self;
     
-    [client getProductComment];
+    [client getProductComment:@"5947974173a7f08ded3e8269"];
+    
+    //5947974173a7f08ded3e8269
     
 }
 

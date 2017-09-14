@@ -44,7 +44,7 @@
 
 -(void)getProductInformation;
 
--(void) getProductComment;
+-(void) getProductComment:(NSString*)productId;
 
 
 @end
