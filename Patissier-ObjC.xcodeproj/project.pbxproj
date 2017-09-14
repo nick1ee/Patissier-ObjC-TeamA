@@ -27,7 +27,7 @@
 		B8EAD50E1F6A1EF400AECA96 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EAD5081F6A1EF400AECA96 /* APIClient.m */; };
 		B8F7F9C61F66608800A72E09 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C51F66608800A72E09 /* User.m */; };
 		B8F7F9C81F66706600A72E09 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F7F9C71F66706600A72E09 /* UserManager.m */; };
-		B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */; };
+		B8FFB8EF1F677B34007A59DA /* InformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FFB8EE1F677B34007A59DA /* InformationCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +68,7 @@
 		B8F7F9C71F66706600A72E09 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		B8F7F9CA1F6685C400A72E09 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		B8FFB8ED1F677B34007A59DA /* InformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationCell.h; sourceTree = "<group>"; };
-		B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileInformationTableViewCell.m; sourceTree = "<group>"; };
+		B8FFB8EE1F677B34007A59DA /* InformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationCell.m; sourceTree = "<group>"; };
 		EB22659258DC1E777BB628BF /* Pods-Patissier-ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Patissier-ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Patissier-ObjC/Pods-Patissier-ObjC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,7 +177,7 @@
 				B8EAD4DB1F68D87500AECA96 /* SegmentedCell.xib */,
 				B86D607A1F6635B4002200D5 /* InformationCell.xib */,
 				B8FFB8ED1F677B34007A59DA /* InformationCell.h */,
-				B8FFB8EE1F677B34007A59DA /* ProfileInformationTableViewCell.m */,
+				B8FFB8EE1F677B34007A59DA /* InformationCell.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -374,7 +374,7 @@
 				B86D60871F663D09002200D5 /* SegmentedCell.m in Sources */,
 				B86D60841F663969002200D5 /* ProfileInformationTableViewController.m in Sources */,
 				B8EAD5091F6A1EF400AECA96 /* AppDelegate.m in Sources */,
-				B8FFB8EF1F677B34007A59DA /* ProfileInformationTableViewCell.m in Sources */,
+				B8FFB8EF1F677B34007A59DA /* InformationCell.m in Sources */,
 				6EBDF43D1F680C88002FB1A6 /* TabBarViewController.m in Sources */,
 				6EBDF4371F6678F0002FB1A6 /* LandingViewController.m in Sources */,
 				B8EAD4E61F691A6F00AECA96 /* OrderListTableViewController.m in Sources */,

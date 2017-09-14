@@ -74,13 +74,19 @@ ProductCollectionViewController *productListTableViewController;
     
     [orderListTableViewController didMoveToParentViewController: self];
     
-    productListTableViewController = [[ProductCollectionViewController alloc] init];
+    UICollectionViewFlowLayout *flowlayout = [[UICollectionViewFlowLayout alloc] init];
+    
+    [flowlayout setItemSize:CGSizeMake(154, 160)];
+    
+    [flowlayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    
+    productListTableViewController = [[ProductCollectionViewController alloc] initWithCollectionViewLayout: flowlayout];
     
     [self addChildViewController: productListTableViewController];
     
     [productListTableViewController didMoveToParentViewController: self];
     
-    selectedSegment = right;
+    selectedSegment = left;
     
     self.tableView.estimatedRowHeight = 300.0;
     
@@ -163,7 +169,7 @@ ProductCollectionViewController *productListTableViewController;
 
     }else {
 
-        return 400.0;
+        return 500.0;
 
     }
 
