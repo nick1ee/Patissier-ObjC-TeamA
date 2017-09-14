@@ -17,4 +17,8 @@
 
 @property (weak, nonatomic) NSString *productId;
 
+@property (weak, nonatomic) NSString *productName;
+
+@property (weak, nonatomic) NSNumber *productPrice;
+
 @end

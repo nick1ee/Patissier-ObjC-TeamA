@@ -49,8 +49,6 @@ NSArray *commentComponents;
     
     [client getProductComment: _productId];
     
-    //5947974173a7f08ded3e8269
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -161,6 +159,12 @@ NSArray *commentComponents;
             NSString *url = [[NSString alloc] initWithFormat:@"http://52.198.40.72/patissier/products/%@/preview.jpg", _productId];
             
             [cell.productImageView sd_setImageWithURL: url];
+            
+            cell.productNameLabel.text = _productName;
+            
+            NSString *price = [NSString stringWithFormat: @"$ %@", [_productPrice stringValue]];
+            
+            cell.productPriceLabel.text = price;
             
             cellToReturn = cell;
             

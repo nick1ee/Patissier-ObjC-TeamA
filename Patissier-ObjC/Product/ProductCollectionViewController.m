@@ -103,13 +103,13 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"%li %li",(long)indexPath.section,indexPath.row);
-    
-    NSLog(@"%@", proudctsInfo[indexPath.row].productId );
-    
     CommentTableViewController *commentTableViewController = [[CommentTableViewController alloc] init];
     
     commentTableViewController.productId = proudctsInfo[indexPath.row].productId;
+    
+    commentTableViewController.productName = proudctsInfo[indexPath.row].productName;
+    
+    commentTableViewController.productPrice = proudctsInfo[indexPath.row].productPrice;
     
     [self presentViewController:commentTableViewController animated:true completion:nil];
     

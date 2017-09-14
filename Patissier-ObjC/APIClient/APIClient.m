@@ -92,8 +92,6 @@
             
             NSArray *comments = data[@"data"];
             
-            NSLog(@"%@ data", comments);
-            
             for(NSDictionary *comment in comments) {
             
                 Comment *commentDetail = [[Comment alloc] init];
