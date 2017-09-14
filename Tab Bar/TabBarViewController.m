@@ -8,8 +8,6 @@
 
 #import "TabBarViewController.h"
 #import "ProfileInformationTableViewController.h"
-#import "CommentTableViewController.h"
-
 #import "ProductCollectionViewController.h"
 
 
@@ -50,20 +48,8 @@
 
     UINavigationController *navigationViewControllerProfile = [[UINavigationController alloc] initWithRootViewController:profileViewController];
 
-    //////
-    CommentTableViewController *commentViewController = [[CommentTableViewController alloc] init];
 
-    commentViewController.tabBarItem.title = @"Comment";
-
-    commentViewController.title = @"Comment";
-
-    commentViewController.tabBarItem.image = [UIImage imageNamed:@"icon-profile-selected"];
-
-    UINavigationController *navigationViewControllerComment = [[UINavigationController alloc] initWithRootViewController:commentViewController];
-
-    //////
-
-    NSArray *tabBreViewControllers = @[navigationViewControllerStore, navigationViewControllerProfile, navigationViewControllerComment];
+    NSArray *tabBreViewControllers = @[navigationViewControllerStore, navigationViewControllerProfile];
 
     [self setViewControllers:tabBreViewControllers animated:YES];
 
