@@ -30,9 +30,19 @@
 
 - (void) setUpProductImageView {
     
-    productImageView.clipsToBounds = true;
+    productImageView.contentMode = UIViewContentModeCenter;
     
-    productImageView.contentMode = UIViewContentModeScaleAspectFit;
+    productImageView.backgroundColor = [UIColor whiteColor];
+    
+    productImageView.layer.shadowColor = [[UIColor blackColor] CGColor];
+    
+    productImageView.layer.shadowOffset = CGSizeMake( 0.0,  1.0);
+    
+    productImageView.layer.shadowOpacity = 0.26;
+    
+    productImageView.layer.shadowRadius = 1.0;
+    
+    productImageView.tintColor = [[UIColor alloc] initWithRed: 165.0 / 255.0 green: 170.0 / 255.0  blue:178.0 / 255.0 alpha: 1.0];
     
 }
 
