@@ -25,6 +25,8 @@
     
     image.layer.masksToBounds = YES;
     
+    image.contentMode = UIViewContentModeScaleAspectFill;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

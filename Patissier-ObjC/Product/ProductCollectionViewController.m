@@ -83,6 +83,8 @@
     
     [cell.productImageView sd_setImageWithURL: proudctsInfo[indexPath.row].imageURL];
     
+    cell.productImageView.tag = indexPath.row;
+    
     cell.productImageView.contentMode = UIViewContentModeScaleAspectFit;
 
      
@@ -91,6 +93,15 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(20, 25, 20, 25);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+//    if (  )
+    
+    
+    
+    
 }
 
 
