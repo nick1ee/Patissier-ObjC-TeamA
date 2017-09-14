@@ -1,6 +1,6 @@
 //
 //  TabBarViewController.m
-//  
+//
 //
 //  Created by yuling on 2017/9/12.
 //
@@ -21,54 +21,50 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 
-    UICollectionViewController *storeViewController = [[UICollectionViewController alloc] init];
-    
-    UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
-    
-    [aFlowLayout setItemSize:CGSizeMake(154, 160)];
-    
-    [aFlowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    
-    storeViewController = [[ProductCollectionViewController alloc]initWithCollectionViewLayout:aFlowLayout];
+    ProductCollectionViewController *storeViewController = [[ProductCollectionViewController alloc] init];
 
-    
-    storeViewController.view.backgroundColor = [UIColor yellowColor];
-    
+    UICollectionViewFlowLayout *flowlayout = [[UICollectionViewFlowLayout alloc] init];
+
+    [flowlayout setItemSize:CGSizeMake(154, 160)];
+
+    [flowlayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+
+    storeViewController = [[ProductCollectionViewController alloc]initWithCollectionViewLayout:flowlayout];
+
     storeViewController.tabBarItem.title = @"Store";
-    
+
     storeViewController.title = @"Store";
-    
+
     storeViewController.tabBarItem.image = [UIImage imageNamed:@"icon-store"];
-    
+
     UINavigationController *navigationViewControllerStore = [[UINavigationController alloc] initWithRootViewController:storeViewController];
-    
+
     ProfileInformationTableViewController *profileViewController = [[ProfileInformationTableViewController alloc] init];
-    
+
     profileViewController.tabBarItem.title = @"Profile";
-    
+
     profileViewController.title = @"Profile";
-    
+
     profileViewController.tabBarItem.image = [UIImage imageNamed:@"icon-profile-selected"];
-    
+
     UINavigationController *navigationViewControllerProfile = [[UINavigationController alloc] initWithRootViewController:profileViewController];
-    
+
     //////
     CommentTableViewController *commentViewController = [[CommentTableViewController alloc] init];
-    
+
     commentViewController.tabBarItem.title = @"Comment";
-    
+
     commentViewController.title = @"Comment";
-    
+
     commentViewController.tabBarItem.image = [UIImage imageNamed:@"icon-profile-selected"];
-    
+
     UINavigationController *navigationViewControllerComment = [[UINavigationController alloc] initWithRootViewController:commentViewController];
-    
+
     //////
-    
+
     NSArray *tabBreViewControllers = @[navigationViewControllerStore, navigationViewControllerProfile, navigationViewControllerComment];
-    
+
     [self setViewControllers:tabBreViewControllers animated:YES];
 
 }
