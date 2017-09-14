@@ -52,6 +52,7 @@
     proudctsInfo = value;
     
     [self.collectionView reloadData];
+    
 
 }
 
@@ -81,6 +82,9 @@
     cell.titleLabel.text = proudctsInfo[indexPath.row].productName;
     
     [cell.productImageView sd_setImageWithURL: proudctsInfo[indexPath.row].imageURL];
+    
+    cell.productImageView.contentMode = UIViewContentModeScaleAspectFit;
+
      
     return cell;
 }
