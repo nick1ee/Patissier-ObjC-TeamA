@@ -10,6 +10,8 @@
 #import "ProductDetailsTableViewCell.h"
 #import "SeparateLineTableViewCell.h"
 #import "CommentTableViewCell.h"
+#import "APIClient.h"
+#import "Comment.h"
 
 typedef enum {
     
@@ -21,7 +23,11 @@ typedef enum {
 
 } commentComponent;
 
-@interface CommentTableViewController ()
+@interface CommentTableViewController () {
+
+    NSArray <__kindof Comment *> *comments;
+    
+}
 
 @end
 
@@ -36,15 +42,25 @@ NSArray *commentComponents;
     
     [self setupTableView];
     
-//    self.tableView.estimatedRowHeight = 150.0;
-//    
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    APIClient *client = [APIClient new];
+    
+    client.commentDelegate = self;
+    
+    [client getProductComment];
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)didGetValue:(id)value {
+
+    comments = value;
+    
+    [self.tableView reloadData];
+    
 }
 
 - (void)setupTableView {
@@ -112,7 +128,7 @@ NSArray *commentComponents;
             
         case comment:
             
-            return 2;
+            return comments.count;
             
         default:
             
@@ -168,6 +184,10 @@ NSArray *commentComponents;
             CommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CommentCellIdentifier forIndexPath:indexPath];
             
             [cell setSelectionStyle: UITableViewCellSelectionStyleNone];
+            
+            cell.commentUserNameLabel.text = comments[indexPath.row].commentUserName;
+            
+            cell.commentUserContentLabel.text = comments[indexPath.row].commentContent;
             
             cellToReturn = cell;
             

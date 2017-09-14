@@ -9,6 +9,7 @@
 #import "APIClient.h"
 #import "AFNetworking.h"
 #import "Product.h"
+#import "Comment.h"
 
 @implementation APIClient
 
@@ -54,15 +55,89 @@
         
         [self.delegate didGetValue:(productsInfo)];
         
-        NSLog(@"JSON: %@ 成功", responseObject);
+//        NSLog(@"JSON: %@ 成功", responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"Error: %@ 失敗", error);
+//        NSLog(@"Error: %@ 失敗", error);
     }];
     
     //    -(void)didGetValue:(id)value;
     //    -(void)didNotGetValue:(NSString*)value;
 }
 
+- (void)getProductComment {
 
+    NSMutableArray *productComments = [[NSMutableArray alloc] init];
+    
+    NSString *URLString = @"http://52.198.40.72/patissier/api/v1/products/5947974173a7f08ded3e8269/comments";
+    
+    [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:URLString parameters:nil error:nil];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    NSString *headerResult = [NSString stringWithFormat:@"Bearer %@",[[NSUserDefaults standardUserDefaults] objectForKey:@"jwtToken"]];
+    
+    [manager.requestSerializer setValue:headerResult forHTTPHeaderField:@"Authorization"];
+    
+    [manager GET:URLString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+        
+            NSDictionary *data = responseObject;
+            
+            NSArray *comments = data[@"data"];
+            
+            NSLog(@"%@ data", comments);
+            
+            for(NSDictionary *comment in comments) {
+            
+                Comment *commentDetail = [[Comment alloc] init];
+                
+                commentDetail.commentId = [comment objectForKey:@"id"];
+                
+                commentDetail.commentContent = [comment objectForKey:@"text"];
+                
+                commentDetail.commentUserId = [[comment objectForKey:@"user"] objectForKey:@"id"];
+                
+                commentDetail.commentUserName = [[comment objectForKey:@"user"] objectForKey:@"name"];
+        
+                [productComments addObject:commentDetail];
+                
+            }
+            
+            [self.commentDelegate didGetValue:(productComments)];
+            
+            NSLog(@"成功拿到comment %@", productComments);
+            
+        }
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        NSLog(@"comment 失敗", error);
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
 
 @end

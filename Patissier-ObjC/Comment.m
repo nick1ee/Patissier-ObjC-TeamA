@@ -10,10 +10,15 @@
 
 @implementation Comment
 
-//- (instancetype) init:(NSDictionary *)json {
-//
-//    _commentId = []
-//    
-//};
+- (instancetype) init:(NSMutableDictionary *)json {
+    
+    _commentId = [json valueForKey: @"id"];
+    _commentContent = [json valueForKey:@"text"];
+    _commentUserId = [[json valueForKey:@"user"] valueForKey:@"id"];
+    _commentUserName = [[json valueForKey:@"name"] valueForKey:@"name"];
+    
+    return self;
+    
+};
 
 @end

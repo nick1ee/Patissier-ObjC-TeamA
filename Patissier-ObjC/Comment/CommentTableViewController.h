@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "APIClient.h"
 
 @interface CommentTableViewController : UITableViewController
+
+@property (weak, nonatomic) id<GetCommentDelegate> commentDelegate;
+
+@property (strong, nonatomic) APIClient *apiClient;
 
 @end
