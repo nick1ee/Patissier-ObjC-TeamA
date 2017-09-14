@@ -55,6 +55,11 @@
                     <constraint firstItem="qe4-1y-zuL" firstAttribute="top" secondItem="pjz-sn-DuW" secondAttribute="top" id="vsC-Fz-7yF"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="commentUserContentLabel" destination="met-pM-OhG" id="lRa-ym-wFC"/>
+                <outlet property="commentUserImageView" destination="pjz-sn-DuW" id="3Be-g9-gcW"/>
+                <outlet property="commentUserNameLabel" destination="qe4-1y-zuL" id="C3h-XI-zWP"/>
+            </connections>
             <point key="canvasLocation" x="34" y="81"/>
         </tableViewCell>
     </objects>

@@ -12,7 +12,17 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    [self setupCommentUserImegeView];
+    
+}
+
+- (void)setupCommentUserImegeView {
+
+    UIImageView *image = _commentUserImageView;
+    
+    image.layer.cornerRadius = image.frame.size.width/2;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
