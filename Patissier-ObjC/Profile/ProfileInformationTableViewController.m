@@ -208,7 +208,7 @@ ProductCollectionViewController *productListTableViewController;
 
         InformationCell *displayCell = cell;
         
-        displayCell.nameLabel.text = manager.currentUser.name;
+        displayCell.nameLabel.text = @"你渴望力量嗎？";
         
         [displayCell.pictureImageView sd_setImageWithURL: manager.currentUser.pictureImageUrl];
 
