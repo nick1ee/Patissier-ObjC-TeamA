@@ -16,14 +16,25 @@
 
 @end
 
+@protocol GetCommentDelegate
+
+- (void) didGetValue:(id)value;
+- (void) didNotGetValue:(NSString*)value;
+
+@end
+
 
 @interface APIClient: NSObject <GetProduct>
 {
     id <GetProduct> delegate;
+    
 }
+
+
 
 @property (weak, nonatomic) id <GetProduct> delegate;
 
+@property (weak, nonatomic) id <GetCommentDelegate> commentDelegate;
 
 @property NSString *firstName;
 
@@ -32,6 +43,8 @@
 //要改成拿回東西的型態
 
 -(void)getProductInformation;
+
+-(void) getProductComment:(NSString*)productId;
 
 
 @end

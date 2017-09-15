@@ -11,6 +11,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "APIClient.h"
 #import "Product.h"
+#import "CommentTableViewController.h"
 
 
 @interface ProductCollectionViewController () {
@@ -83,6 +84,8 @@
     
     [cell.productImageView sd_setImageWithURL: proudctsInfo[indexPath.row].imageURL];
     
+    cell.productImageView.tag = indexPath.row;
+    
     cell.productImageView.contentMode = UIViewContentModeScaleAspectFit;
 
      
@@ -91,6 +94,25 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(20, 25, 20, 25);
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CommentTableViewController *commentTableViewController = [[CommentTableViewController alloc] init];
+    
+    commentTableViewController.productId = proudctsInfo[indexPath.row].productId;
+    
+    commentTableViewController.productName = proudctsInfo[indexPath.row].productName;
+    
+    commentTableViewController.productPrice = proudctsInfo[indexPath.row].productPrice;
+    
+    [self.navigationController pushViewController: commentTableViewController animated: true];
+    
 }
 
 
