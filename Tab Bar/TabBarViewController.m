@@ -1,6 +1,6 @@
 //
 //  TabBarViewController.m
-//  
+//
 //
 //  Created by yuling on 2017/9/12.
 //
@@ -21,35 +21,36 @@
     [super viewDidLoad];
 
     ProductCollectionViewController *storeViewController = [[ProductCollectionViewController alloc] init];
-    
+
     UICollectionViewFlowLayout *flowlayout = [[UICollectionViewFlowLayout alloc] init];
-    
+
     [flowlayout setItemSize:CGSizeMake(154, 160)];
-    
+
     [flowlayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    
+
     storeViewController = [[ProductCollectionViewController alloc]initWithCollectionViewLayout:flowlayout];
-    
+
     storeViewController.tabBarItem.title = @"Store";
-    
+
     storeViewController.title = @"Store";
-    
+
     storeViewController.tabBarItem.image = [UIImage imageNamed:@"icon-store"];
-    
+
     UINavigationController *navigationViewControllerStore = [[UINavigationController alloc] initWithRootViewController:storeViewController];
-    
+
     ProfileInformationTableViewController *profileViewController = [[ProfileInformationTableViewController alloc] init];
-    
+
     profileViewController.tabBarItem.title = @"Profile";
-    
+
     profileViewController.title = @"Profile";
-    
+
     profileViewController.tabBarItem.image = [UIImage imageNamed:@"icon-profile-selected"];
-    
+
     UINavigationController *navigationViewControllerProfile = [[UINavigationController alloc] initWithRootViewController:profileViewController];
-    
+
+
     NSArray *tabBreViewControllers = @[navigationViewControllerStore, navigationViewControllerProfile];
-    
+
     [self setViewControllers:tabBreViewControllers animated:YES];
 
 }

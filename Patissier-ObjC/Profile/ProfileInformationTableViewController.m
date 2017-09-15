@@ -63,7 +63,7 @@ ProductCollectionViewController *productListTableViewController;
     UINib *infoNib = [UINib nibWithNibName: @"InformationCell" bundle:nil];
 
     [self.tableView registerNib: infoNib forCellReuseIdentifier: @"InformationCell"];
-
+ 
     UINib *segmentNib = [UINib nibWithNibName: @"SegmentedCell" bundle: nil];
 
     [self.tableView registerNib: segmentNib forCellReuseIdentifier: @"SegmentedCell"];
